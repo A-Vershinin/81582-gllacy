@@ -53,36 +53,44 @@
           </ul>
         </nav>
         <!-- end nav -->
-        <div class="user-block">
-          <i class="user-block__search" id="search-field">Поиск</i>
+        <ul class="user-block">
+          <li class="user-block__item" id="search-field">
+            <i class="user-block__search-icon">Поиск</i>
+          <!-- </li> -->
+            <form class="user-block__search-form" action="#" method="post" id="search-form">
+              <input type="search" name="search-btn" id="search-field" placeholder="Что ищем?">
+              <label for="search-field">Что ищем?</label>
+            </form>
+          </li>
           <!-- end user-block__search -->
-          <form class="user-block__search-form" action="#" method="post" id="search-form">
-            <input type="search" name="search-btn" id="search-field" placeholder="Что ищем?">
-            <label for="search-field"></label>
-          </form>
-          <!-- end user-block__search-form -->
-          <a href="#" class="user-block__login" id="login-field">Вход</a>
+          <li class="user-block__item" id="login-field">
+            <a href="#" class="user-block__login" >Вход</a>
+            <!-- id="login-field" -->
+
+            <form class="user-block__login-form" action="#" method="get" id="login-form">
+              <input type="email" name="email" id="email-field" placeholder="Электронная почта" required>
+              <label class="login-form__label-email" for="email-field">Электронная почта</label>
+
+              <input type="password" name="password" id="password-field" placeholder="Пароль" required>
+              <label class="login-form__label-pass" for="password-field">Пароль</label>
+
+              <button class="login-form__form-btn" type="submit">Войти</button>
+              <a class="login-form__link-forgot" href="#">Забыли пароль?</a>
+              <a class="login-form__new-account-link" href="#">Новая регистрация</a>
+            </form>
+          </li>
           <!-- end user-block__login -->
-          <form class="user-block__login-form" action="#" method="get" id="login-form">
-            <input type="email" name="email" id="email-field" placeholder="Электронная почта" required>
-            <label for="email-field"></label>
-
-            <input type="password" name="password" id="password-field" placeholder="Пароль" required>
-            <label for="password-field"></label>
-
-            <button class="login-form__form-btn" type="submit">Войти</button>
-            <a class="login-form__link-forgot" href="#">Забыли пароль?</a>
-            <a class="login-form__new-account-link" href="#">Новая регистрация</a>
-          </form>
-          <!-- end user-block__login-form -->
-          <a href="#" class="user-block__basket">Пусто</a>
+          <li class="user-block__item">
+            <a href="#" class="user-block__basket">Пусто</a>
+          </li>
           <!-- end user-block__basket -->
           <div class="user-block__timework">
             <span>С 10 до 20, ежедневно</span>
             <a class="user-block__tell" href="tel:88124502525">8 812 450-25-25</a>
           </div>
           <!-- end user-block__timework -->
-        </div>
+        </ul>
+
       </div>
     </header>
     <main class="page-content">
@@ -185,15 +193,15 @@
           <form class="about-form" action="#" method="post">
             <p class="about-form__desc">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) </p>
             <input type="email" name="email" id="email_field" placeholder="Электронная почта">
-            <label for="email_field"></label>
+            <label for="email_field">Электронная почта</label>
             <button class="about-form__btn" type="submit">Отправить</button>
           </form>
         </section>
       </div>
       <!-- end container -->
         <section class="location" id="map">
-
-          <!-- <div class="location__map">Для айфрейма</div> -->
+          <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5994282705212!2d30.320958989346103!3d59.93878880753533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1471256489120" width="1200" height="430" allowfullscreen>
+          </iframe>
           <i class="location__map-point"></i>
           <div class="location__contacts">
             <div class="location__adress">
@@ -209,7 +217,7 @@
               <a class="location__tell" href="tel:88124502525">8 812 450-25-25</a>
               <span class="location__time">(С 10 до 20, ежедневно)</span>
             </div>
-            <a class="location__feedback" href="#">Форма обратной связи</a>
+            <a class="location__feedback js-contact" href="#">Форма обратной связи</a>
           </div>
         </section>
     </main>
@@ -247,6 +255,21 @@
     </footer>
   </div>
   <!-- end site-wrapper -->
+  <div class="modal-feedback">
+    <button class="modal-feedback-close" type="button" title="Закрыть">Закрыть</button>
+    <h2 class="feedback-title">Мы обязательно вам ответим!</h2>
+    <form class="feedback-form" action="#" method="post">
+      <input type="text" name="name" id="name-field" placeholder="Как вас зовут?">
+      <label for="name-field">Как вас зовут?</label>
+      <input type="email" name="email" id="email-field" placeholder="Ваша почта для ответа?">
+      <label for="email-field">Ваша почта для ответа?</label>
+      <textarea name="review" rows="5" cols="40" id="feedback-area-field" placeholder="Напишите что-нибудь..."></textarea>
+      <label for="feedback-area-field">Напишите что-нибудь...</label>
+      <button class="feedback-btn" type="sumbit">Отправить</button>
+    </form>
+  </div>
+  <div class="modal-overlay"></div>
+
 
 
   <!-- Query -->

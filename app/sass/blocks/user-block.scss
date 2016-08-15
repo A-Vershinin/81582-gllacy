@@ -1,34 +1,19 @@
 .user-block {
+  @include clearfix();
+  margin: 0;
   position: relative;
   float: right;
   max-width: 267px;
-  margin-top: 23px;
+  margin-top: 18px;
   font-size: 0;
+  list-style: none;
 }
-.user-block__search {
-  position: relative;
-  display: block;
+.user-block__item {
+  display: inline-block;
   float: left;
-  width: 34px;
-  height: 34px;
-  margin-left: 5px;
-  margin-right: 10px;
-  background-color: rgba(0,0,0,.2);
-  background-image: url("../../img/icons/icon-search.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  border-radius: 15px;
-  cursor: pointer;
-  &:hover {
-    background: #f8f7f4 url("../../img/icons/icon-search-black.png") no-repeat center center;
-    transition: background 0.8s ease 0s;
-  }
-  &:active {
-    color: #333;
-    background-color: #ededed;
-    box-shadow: inset 0 2px 1px dimgrey;
-    transition: none;
-  }
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .user-block__search-form {
   margin: 0;
@@ -36,23 +21,33 @@
   z-index: 2;
   position: absolute;
   width: 342px;
-  top: 37px;
-  right: 225px;
+  top: 44px;
+  right: 8px;
   padding: 20px 15px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
   border-radius: 5px;
   display: none;
   box-sizing: border-box;
-  cursor: pointer;
+  & label {
+    font-size: 0;
+  }
   & input {
     margin: 0;
     outline: 0;
     width: 100%;
     height: 44px;
     padding: 0 10px;
-    border: 1px solid #d3d3d2;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: $roboto-regular;
+    color: $input-textarea-color;
+    background-color: #fff;
+    font-weight: 700;
     border-radius: 5px;
+    border: 1px solid $border-color;
+    text-overflow: ellipsis;
+    outline: none;
     box-sizing: border-box;
     &::-webkit-input-placeholder {
       color: $input-text-color;
@@ -64,10 +59,21 @@
       color: $input-text-color;
     }
     &:hover {
-      border-color: $border-color-hover;
+      border: 2px solid $border-color-hover;
+      box-sizing: border-box;
     }
     &:focus {
-      border-color: $border-color-focus;
+      border: 2px solid $border-color-focus;
+      box-sizing: border-box;
+      &+label {
+        position: absolute;
+        top: 5px;
+        left: 34px;
+        font-size: 11px;
+        line-height: 13px;
+        font-family: $roboto-regular;
+        color: #5b9ddf;
+      }
       &::-webkit-input-placeholder {
         color: transparent;
       }
@@ -80,13 +86,37 @@
     }
   }
 }
+.user-block__search-icon {
+  display: block;
+  width: 34px;
+  height: 34px;
+  margin-left: 5px;
+  margin-right: 10px;
+  background-color: rgba(0,0,0,.2);
+  background-image: url("../../img/icons/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 15px;
+  cursor: pointer;
+  &:hover {
+    color: $link-nav-hover;
+    background: $bg-nav-hover url("../../img/icons/icon-search-black.png") no-repeat center center;
+    transition: background 0.8s ease 0s;
+  }
+  &:active {
+    color: $link-nav-active;
+    background-color: $bg-nav-active;
+    box-shadow: inset 0 2px 1px dimgrey;
+    transition: none;
+  }
+}
 .user-block__login {
   position: relative;
   display: inline-block;
   vertical-align: middle;
   padding: 9px 0;
-  padding-left: 43px;
-  padding-right: 16px;
+  padding-left: 45px;
+  padding-right: 15px;
   margin-right: 10px;
   font-size: 14px;
   line-height: 16px;
@@ -128,14 +158,17 @@
   z-index: 2;
   position: absolute;
   width: 278px;
-  top: 37px;
-  right: 125px;
+  top: 44px;
+  right: 8px;
   padding: 20px 19px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
   border-radius: 5px;
   display: none;
   box-sizing: border-box;
+  & label {
+    font-size: 0;
+  }
   & input {
     border: 0;
     padding: 0;
@@ -145,10 +178,17 @@
     height: 44px;
     padding: 0 10px;
     margin-bottom: 20px;
-    border: 1px solid $border-color;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: $roboto-regular;
+    color: $input-textarea-color;
+    background-color: #fff;
+    font-weight: 700;
     border-radius: 5px;
+    border: 1px solid $border-color;
+    text-overflow: ellipsis;
+    outline: none;
     box-sizing: border-box;
-    cursor: pointer;
     &::-webkit-input-placeholder {
       color: $input-text-color;
     }
@@ -159,10 +199,26 @@
       color: $input-text-color;
     }
     &:hover {
-      border-color: $border-color-hover;
+      border: 2px solid $border-color-hover;
+      box-sizing: border-box;
     }
     &:focus {
-      border-color: $border-color-focus;
+      border: 2px solid $border-color-focus;
+      box-sizing: border-box;
+      &+label {
+        position: absolute;
+        left: 34px;
+        font-size: 11px;
+        line-height: 13px;
+        font-family: $roboto-regular;
+        color: #5b9ddf;
+      }
+      &+.login-form__label-email {
+        top: 5px;
+      }
+      &+.login-form__label-pass {
+        top: 70px;
+      }
       &::-webkit-input-placeholder {
         color: transparent;
       }
@@ -231,7 +287,7 @@
   display: inline-block;
   vertical-align: middle;
   padding: 9px 0;
-  padding-left: 44px;
+  padding-left: 43px;
   padding-right: 34px;
   font-size: 14px;
   line-height: 16px;
@@ -269,7 +325,7 @@
 .user-block__timework {
   max-width: 100%;
   float: right;
-  padding-top: 15px;
+  padding-top: 10px;
   font-size: 16px;
 }
 .user-block__timework span {
@@ -289,7 +345,7 @@
   text-decoration: none;
   font-weight: 700;
 }
-#search-field:hover ~ #search-form,
-#login-field:hover ~ #login-form {
+#search-field:hover  #search-form,
+#login-field:hover #login-form {
   display: block;
 }

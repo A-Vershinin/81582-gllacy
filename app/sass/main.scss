@@ -13,6 +13,7 @@ body > input[type="radio"] {
   display: none;
 }
 input {
+  color: $input-textarea-color;
   background-color: white;
   border: 1px solid $border-color;
   font-size: 16px;
@@ -49,11 +50,13 @@ input:invalid {
   border-color: #f0b1b1;
 }
 textarea {
-  border: 1px solid $border-color;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   font-family: $roboto-regular;
+  color: $input-textarea-color;
+  background-color: white;
+  border: 1px solid $border-color;
   &::-webkit-input-placeholder {
     color: $input-text-color;
   }

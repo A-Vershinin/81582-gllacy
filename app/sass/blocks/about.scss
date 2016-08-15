@@ -45,6 +45,7 @@
   }
 }
 .about-form {
+  position: relative;
   margin: 0;
   border: 0;
   width: 48.9%;
@@ -64,6 +65,10 @@
   line-height: 22px;
   font-family: $roboto-regular;
 }
+.about-form label {
+  font-size: 0;
+  position: absolute;
+}
 .about-form input {
   margin: 0;
   outline: 0;
@@ -73,6 +78,7 @@
   margin-right: 10px;
   margin-bottom: 36px;
   margin-left: 20px;
+  color: $input-textarea-color;
   background-color: #fff;
   border: 1px solid $border-color;
   border-radius: 5px;
@@ -92,14 +98,23 @@
   }
   &:focus {
     border-color: $border-color-focus;
+    &+label {
+      position: absolute;
+      top: 112px;
+      left: 34px;
+      font-size: 11px;
+      line-height: 13px;
+      font-family: $roboto-regular;
+      color: #5b9ddf;
+    }
     &::-webkit-input-placeholder {
-      color: $base-color;
+      color: $input-text-color;
     }
     &:-moz-placeholder {
-      color: $base-color;
+      color: $input-text-color;
     }
     &:-ms-input-placeholder {
-      color: $base-color;
+      color: $input-text-color;
     }
   }
 }

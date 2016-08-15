@@ -9,7 +9,7 @@
 @import "fonts.scss";
 @import "main.scss";
 
-/* Стили различных BEM-блоков*/
+/* Стили BEM-блоков*/
 // index.html
 @import "blocks/site-wrapper.scss";
 @import "blocks/container.scss";
@@ -28,6 +28,8 @@
 @import "blocks/form.scss";
 @import "blocks/location.scss";
 @import "blocks/page-footer.scss";
+@import "blocks/modal-feedback.scss";
+@import "blocks/modal-overlay.scss";
 //catalog.html
 @import "blocks/breadcrumbs.scss";
 @import "blocks/catalog-title.scss";

@@ -8,20 +8,14 @@
   }
 }
 @mixin button-background {
-  background-image: -webkit-linear-gradient(bottom, #e74a35 0%, #f26843 100%);
-  background-image: -o-linear-gradient(bottom, #e74a35 0%, #f26843 100%);
   background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
   background-color: #fff;
 }
 @mixin button-background-hover {
-  background-image: -webkit-linear-gradient(bottom, #ec6e5d 0%, #f58669 100%);
-  background-image: -o-linear-gradient(bottom, #ec6e5d 0%, #f58669 100%);
   background-image: linear-gradient(to top, #ec6e5d 0%, #f58669 100%);
   background-color: #fff;
 }
 @mixin button-background-active {
-  background-image: -webkit-linear-gradient(bottom, #e1613e 0%, #d74531 100%);
-  background-image: -o-linear-gradient(bottom, #e1613e 0%, #d74531 100%);
   background-image: linear-gradient(to top, #e1613e 0%, #d74531 100%);
   background-color: #fff;
 }
