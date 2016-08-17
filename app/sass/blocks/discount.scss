@@ -54,6 +54,7 @@
     text-overflow: ellipsis;
     cursor: pointer;
     box-sizing: border-box;
+    outline: none;
     &:hover {
       color: $button-textcolor;
       @include button-background-hover;

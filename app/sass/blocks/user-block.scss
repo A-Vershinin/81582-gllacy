@@ -287,8 +287,8 @@
   display: inline-block;
   vertical-align: middle;
   padding: 9px 0;
-  padding-left: 43px;
-  padding-right: 34px;
+  padding-left: 43px; //38
+  padding-right: 34px; // 16
   font-size: 14px;
   line-height: 16px;
   font-family: $roboto-medium;
@@ -348,4 +348,33 @@
 #search-field:hover  #search-form,
 #login-field:hover #login-form {
   display: block;
+}
+.catalog-page .site-wrapper {
+  & .user-block__basket  {
+    padding-left: 34px;
+    padding-right: 15px;
+    background-color: #fff;
+    color: $link2;
+    & span {
+      padding-left: 9px;
+      padding-right: 4px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 7px;
+      left: 15px;
+      background: transparent url("../../img/icons/icon-basket-full.png") no-repeat center;
+    }
+    &:hover {
+      color: #000;
+      background-color: $link;
+      transition: background 0.8s ease 0s;
+      &::before {
+        background: transparent url("../../img/icons/icon-basket-full.png") no-repeat center;
+      }
+    }
+  }
 }

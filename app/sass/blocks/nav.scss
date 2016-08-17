@@ -14,6 +14,7 @@
   display: inline-block;
   vertical-align: top;
   font-size: 16px;
+  padding-bottom: 10px;
 
   padding-right: 20px;
   &:first-child {
@@ -62,10 +63,12 @@
       box-shadow: none;
     }
   }
+  &--show {
+    &~.supnav {
+      display: block;
+    }
+  }
 }
-.nav__link:hover ~ .supnav {
-  display: block;
-}
-.nav__link--active ~ .supnav {
+#nav__link:hover  #supnav {
   display: block;
 }

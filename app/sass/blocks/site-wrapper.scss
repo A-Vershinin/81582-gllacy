@@ -1,5 +1,4 @@
 .site-wrapper {
-  // min-height: 940px;
   background: #849d8f url("../../img/pict/slide1.png") no-repeat top center;
   transition: background-image 0.5s ease,
               background-color 0.5s ease;
@@ -10,5 +9,8 @@
   }
   &::after {
     background-image: url("../../img/pict/slide3.png") no-repeat;
+  }
+  &--catalog {
+    background: #849d8f;
   }
 }

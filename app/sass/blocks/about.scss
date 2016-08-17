@@ -78,12 +78,17 @@
   margin-right: 10px;
   margin-bottom: 36px;
   margin-left: 20px;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $roboto-regular;
+  font-weight: 700;
   color: $input-textarea-color;
   background-color: #fff;
   border: 1px solid $border-color;
   border-radius: 5px;
   box-sizing: border-box;
-  cursor: pointer;
+  text-overflow: ellipsis;
+  outline: none;
   &::-webkit-input-placeholder {
     color: $input-text-color;
   }
@@ -108,13 +113,13 @@
       color: #5b9ddf;
     }
     &::-webkit-input-placeholder {
-      color: $input-text-color;
+      color: transparent;
     }
     &:-moz-placeholder {
-      color: $input-text-color;
+      color: transparent;
     }
     &:-ms-input-placeholder {
-      color: $input-text-color;
+      color: transparent;
     }
   }
 }
@@ -136,6 +141,7 @@
   text-overflow: ellipsis;
   cursor: pointer;
   box-sizing: border-box;
+  outline: none;
   &:hover {
     color: $button-textcolor;
     @include button-background-hover;

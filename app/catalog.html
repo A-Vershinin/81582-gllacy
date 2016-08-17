@@ -11,91 +11,85 @@
   <link href="css/style.css" rel="stylesheet">
 
 </head>
-<body>
-  <div class="site-wrapper">
-  <header class="page-header">
-    <div class="container">
-      <a class="logo" href="index.html">
-        <img class="logo__link" src="http://placehold.it/153x63" width="153" height="63" alt="логотип"></a>
-      <!-- end logo -->
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link" href="#">Каталог</a>
-            <ul class="supnav">
-              <li class="supnav__item"><a href="#">Новинки</a></li>
-              <li class="supnav__item"><a href="#">Сливочное</a></li>
-              <li class="supnav__item"><a href="#">Щербеты</a></li>
-              <li class="supnav__item"><a href="#">Фруктовый лед</a></li>
-              <li class="supnav__item"><a href="#">Мелорин</a></li>
-            </ul>
+<body class="catalog-page">
+  <div class="site-wrapper site-wrapper--catalog">
+    <header class="page-header">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img class="logo__link" src="img/gllacy-logo.svg" width="153" height="63" alt="логотип">
+        </a>
+        <!-- end logo -->
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item" id="nav__link">
+              <a class="nav__link nav__link--active">Каталог</a>
+              <ul class="supnav" id="supnav">
+                <li class="supnav__item">
+                  <a class="supnav__link" href="#">Новинки</a>
+                </li>
+                <li class="supnav__item">
+                  <a class="supnav__link" href="catalog.html">Сливочное</a>
+                </li>
+                <li class="supnav__item">
+                  <a class="supnav__link supnav__link--active" href="#">Щербеты</a>
+                </li>
+                <li class="supnav__item">
+                  <a class="supnav__link" href="#">Фруктовый лед</a>
+                </li>
+                <li class="supnav__item">
+                  <a class="supnav__link" href="#">Мелорин</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Доставка и оплата</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">О Компании</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- end nav -->
+        <ul class="user-block">
+          <li class="user-block__item" id="search-field">
+            <i class="user-block__search-icon">Поиск</i>
+          <!-- </li> -->
+            <form class="user-block__search-form" action="#" method="post" id="search-form">
+              <input type="search" name="search-btn" id="search-field" placeholder="Что ищем?">
+              <label for="search-field">Что ищем?</label>
+            </form>
           </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">Доставка и оплата</a>
+          <!-- end user-block__search -->
+          <li class="user-block__item" id="login-field">
+            <a href="#" class="user-block__login" >Вход</a>
+            <!-- id="login-field" -->
+
+            <form class="user-block__login-form" action="#" method="get" id="login-form">
+              <input type="email" name="email" id="email-field" placeholder="Электронная почта" required>
+              <label class="login-form__label-email" for="email-field">Электронная почта</label>
+
+              <input type="password" name="password" id="password-field" placeholder="Пароль" required>
+              <label class="login-form__label-pass" for="password-field">Пароль</label>
+
+              <button class="login-form__form-btn" type="submit">Войти</button>
+              <a class="login-form__link-forgot" href="#">Забыли пароль?</a>
+              <a class="login-form__new-account-link" href="#">Новая регистрация</a>
+            </form>
           </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">О Компании</a>
+          <!-- end user-block__login -->
+          <li class="user-block__item">
+            <a href="#" class="user-block__basket"><span>2</span>товара</a>
           </li>
+          <!-- end user-block__basket -->
+          <div class="user-block__timework">
+            <span>С 10 до 20, ежедневно</span>
+            <a class="user-block__tell" href="tel:88124502525">8 812 450-25-25</a>
+          </div>
+          <!-- end user-block__timework -->
         </ul>
-      </nav>
-      <!-- end nav -->
-      <div class="user-block">
-        <i class="user-block__search"></i>
-        <!-- end user-block__search -->
-        <form class="user-block__search-form" action="#" method="post">
-          <input type="search" name="search-btn" id="search-field" placeholder="Что ищем?">
-          <label for="search-field"></label>
-        </form>
-        <!-- end user-block__search-form -->
-        <a href="#" class="user-block__login">Вход</a>
-        <!-- end user-block__login -->
-        <form class="user-block__login-form" action="#" method="get">
-          <input type="email" name="email" id="email-field" placeholder="Электронная почта" required>
-          <label for="email-field"></label>
 
-          <input type="password" name="password" id="password-field" placeholder="Пароль" required>
-          <label for="password-field"></label>
-
-          <button class="login-form__form-btn" type="submit">Войти</button>
-          <a class="login-form__link-forgot" href="#">Забыли пароль?</a>
-          <a class="login-form__new-account-link" href="#">Новая регистрация</a>
-        </form>
-        <!-- end user-block__login-form -->
-        <a href="#" class="user-block__basket">2 товара</a>
-        <!-- end user-block__basket -->
-        <div class="user-block__basket_goods">
-          <table class="goods__table">
-            <tr class="goods__item">
-              <td><img class="goods__img" src="#" alt="фото товара №1"></td>
-              <td class="goods__desc">Пломбир с апельсиновым джемом</td>
-              <td class="goods__number">1,5 кг х 200 руб.</td>
-              <td class="goods__price">300 руб.</td>
-            </tr>
-            <tr class="goods__item">
-              <td><img class="goods__img" src="#" alt="фото товара №2"></td>
-              <td class="goods__desc">Клубничный пломбир с присыпкой из белого шоколада</td>
-              <td class="goods__number">1,5 кг х 300 руб.</td>
-              <td class="goods__price">450 руб.</td>
-            </tr>
-          </table>
-          <!-- end goods__table -->
-          <span class="goods__all">Итого
-            <i class="goods__all--price">750 руб.</i>
-          </span>
-          <!-- end goods__all -->
-          <a class="goods__buy" href="#">Оформить заказ</a>
-        </div>
-        <!-- end user-block__basket_goods -->
-        <div class="user-block__timework">
-          <span>С 10 до 20, ежедневно</span>
-          <a class="user-block__tell" href="tel:88124502525">8 812 450-25-25</a>
-        </div>
-        <!-- end user-block__timework -->
       </div>
-      <!-- end user-block -->
-    </div>
-    <!-- end container -->
-  </header>
+    </header>
   <main class="page-content">
     <div class="container">
       <div class="breadcrumbs">
@@ -259,15 +253,23 @@
       </div>
       <!-- end social -->
       <ul class="for-buyers">
-        <li class="for-buyers__item"><a href="#">Для поставщиков</a></li>
-        <li class="for-buyers__item"><a href="#">О производстве </a></li>
-        <li class="for-buyers__item"><a href="#">Наши документы</a></li>
-        <li class="for-buyers__item"><a href="#">Экологические стандарты</a></li>
+        <li class="for-buyers__item">
+          <a class="for-buyers__link" href="#"><span>Для поставщиков</span></a>
+        </li>
+        <li class="for-buyers__item">
+          <a class="for-buyers__link" href="#">Наши документы</a>
+        </li>
+        <li class="for-buyers__item">
+          <a class="for-buyers__link" href="#">О производстве</a>
+        </li>
+        <li class="for-buyers__item">
+          <a class="for-buyers__link" href="#">Экологические стандарты</a>
+        </li>
       </ul>
       <!-- end for-buyers -->
       <div class="copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru"></a>
-          <span class="copyright__text">Сделано в HTML Academy &#169; 2016</span>
+        <a class="copyright__link" href="https://htmlacademy.ru"></a>
+        <span class="copyright__text">Сделано в <i>HTML Academy</i> &#169; 2016</span>
       </div>
       <!-- end copyright -->
     </div>
