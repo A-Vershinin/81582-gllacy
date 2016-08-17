@@ -17,18 +17,23 @@
   font-size: 16px;
   &:first-child {
     & .supnav__link {
+      position: relative;
+      z-index: 5;
       font-weight: 700;
       &::after {
         content: "";
         position: absolute;
         width: 128px;
         height: 1px;
-        top: 34px;
+        top: 31px;
         left: 6px;
-        background-color: rgba(50,50,50,.2);
+        border-bottom: 1px solid rgba(0,0,0,.2);
       }
     }
   }
+}
+.supnav__link-wrapper {
+  border-bottom: 1px solid rgba(0,0,0,.2);
 }
 .supnav__link {
   position: relative;
@@ -49,6 +54,7 @@
   &:hover {
     background-color: $bg-supnav-hover;
     transition: background 0.5s ease 0s;
+    border-radius: 0;
   }
   &:active {
     background-color: $bg-supnav-active;

@@ -115,8 +115,9 @@ textarea:invalid {
     background-image: url("../../img/pict/slide2.png") no-repeat; }
   .site-wrapper::after {
     background-image: url("../../img/pict/slide3.png") no-repeat; }
-  .site-wrapper--catalog {
-    background: #849d8f; }
+
+.catalog-page .site-wrapper {
+  background: #849d8f; }
 
 .container {
   max-width: 1146px;
@@ -226,15 +227,20 @@ textarea:invalid {
   list-style: none;
   font-size: 16px; }
   .supnav__item:first-child .supnav__link {
+    position: relative;
+    z-index: 5;
     font-weight: 700; }
     .supnav__item:first-child .supnav__link::after {
       content: "";
       position: absolute;
       width: 128px;
       height: 1px;
-      top: 34px;
+      top: 31px;
       left: 6px;
-      background-color: rgba(50, 50, 50, 0.2); }
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+
+.supnav__link-wrapper {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
 
 .supnav__link {
   position: relative;
@@ -254,7 +260,8 @@ textarea:invalid {
   z-index: 2; }
   .supnav__link:hover {
     background-color: #fbded7;
-    transition: background 0.5s ease 0s; }
+    transition: background 0.5s ease 0s;
+    border-radius: 0; }
   .supnav__link:active {
     background-color: #f6b5a5;
     transition: none; }
@@ -1618,6 +1625,181 @@ textarea:invalid {
   color: #fff;
   background-color: transparent;
   margin-bottom: 25px; }
+
+.filter {
+  max-width: 862px;
+  margin-bottom: 40px;
+  color: #fff;
+  background-color: transparent; }
+  .filter:before, .filter:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.filter-sort {
+  max-width: 194px;
+  float: left;
+  margin-right: 16px;
+  margin-bottom: 10px; }
+  .filter-sort select {
+    outline: 0;
+    border: 0;
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 13px;
+    font-size: 16px;
+    line-height: 18px;
+    font-family: "RobotoMedium", "Arial", sans-serif;
+    font-weight: 500;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px; }
+    .filter-sort select:active {
+      color: #323232;
+      background-color: #fff; }
+    .filter-sort select option {
+      border: 0;
+      font-size: 14px;
+      line-height: 16px;
+      font-family: "RobotoRegular", "Arial", sans-serif;
+      font-weight: 500;
+      color: #323232;
+      background-color: transparent; }
+
+.filter-sort__title {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 16px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  font-family: "RobotoMedium", "Arial", sans-serif; }
+
+.filter-custom {
+  max-width: 218px;
+  float: left;
+  margin-right: 16px;
+  margin-bottom: 10px; }
+
+.filter-custom__range {
+  position: relative;
+  max-width: 218px;
+  height: 14px;
+  margin-bottom: 8px;
+  color: #fff;
+  background-color: transparent;
+  padding-left: 15px; }
+  .filter-custom__range input[type="text"] {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    display: inline-block;
+    vertical-align: top;
+    width: 30px;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: "RobotoMedium", "Arial", sans-serif;
+    font-weight: 500;
+    color: #fff;
+    background-color: transparent;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 0; }
+  .filter-custom__range span:first-child::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 88px;
+    width: 7px;
+    height: 2px;
+    background-color: #fff; }
+  .filter-custom__range span:last-child {
+    margin-right: 0; }
+
+.filter__price,
+.filter__currency {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "RobotoMedium", "Arial", sans-serif;
+  font-weight: 500;
+  color: #fff; }
+
+.filter__currency {
+  position: relative;
+  margin-right: 12px; }
+
+.filter-custom__controls {
+  position: relative;
+  height: 36px;
+  padding: 0 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  overflow: hidden; }
+
+.filter__scale {
+  width: 188px;
+  margin-top: 16px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.5); }
+  .filter__scale .filter__bar {
+    width: 107px;
+    height: 4px;
+    margin-left: 22px;
+    background-color: #f8f7f4; }
+
+.filter__toggle {
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  background-color: #f8f7f4;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); }
+  .filter__toggle--min {
+    left: 36px; }
+  .filter__toggle--max {
+    left: 133px; }
+
+.filter-fatness {
+  max-width: 415px;
+  float: left;
+  margin-bottom: 10px; }
+  .filter-fatness fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0; }
+
+.filter-fatness__title {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 16px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  font-family: "RobotoMedium", "Arial", sans-serif; }
+
+.filter-fillers {
+  max-width: 702px;
+  float: left;
+  padding-top: 22px; }
+
+.filter-form__btn {
+  max-width: 144px;
+  float: left;
+  border: 0;
+  margin: 0;
+  outline: 0;
+  margin-top: 22px;
+  cursor: pointer; }
 
 /*Стили библиотек*/
 /* Magnific Popup CSS */

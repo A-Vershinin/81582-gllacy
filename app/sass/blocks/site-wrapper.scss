@@ -10,7 +10,9 @@
   &::after {
     background-image: url("../../img/pict/slide3.png") no-repeat;
   }
-  &--catalog {
+}
+.catalog-page {
+  & .site-wrapper {
     background: #849d8f;
   }
 }
