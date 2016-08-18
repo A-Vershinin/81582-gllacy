@@ -273,6 +273,9 @@ textarea:invalid {
       color: #fff;
       background-color: #d07058; }
 
+.top-line {
+  min-height: 73px; }
+
 .user-block {
   margin: 0;
   position: relative;
@@ -744,31 +747,31 @@ textarea:invalid {
     box-shadow: inset 0 2px 2px #942718; }
 
 .user-block__timework {
-  max-width: 100%;
-  float: right;
-  padding-top: 10px;
+  display: block;
+  max-width: 200px;
+  margin-left: auto;
   font-size: 16px; }
 
-.user-block__timework span {
+.user-block__timework span,
+.user-block__tell {
   display: block;
   font-size: 14px;
   line-height: 16px;
   font-family: "RobotoBold", "Arial", sans-serif;
   color: #fff;
   font-weight: 700;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  text-align: right; }
 
 .user-block__tell {
-  color: #fff;
   font-size: 22px;
   line-height: 24px;
-  font-family: "RobotoBold", "Arial", sans-serif;
   text-decoration: none;
-  font-weight: 700; }
+  margin-bottom: 0; }
 
-#search-field:hover #search-form,
-#login-field:hover #login-form,
-#basket-field:hover #basket-form {
+#search-field-open:hover #search-form,
+#login-field-open:hover #login-form,
+#basket-field-open:hover #basket-form {
   display: block; }
 
 .catalog-page .site-wrapper .user-block__basket {

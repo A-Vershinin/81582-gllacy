@@ -1,3 +1,6 @@
+.top-line {
+  min-height: 73px;
+}
 .user-block {
   @include clearfix();
   margin: 0;
@@ -492,13 +495,17 @@
     @include button-box-shadow-active;
   }
 }
+.bottom-line {
+
+}
 .user-block__timework {
-  max-width: 100%;
-  float: right;
-  padding-top: 10px;
+  display: block;
+  max-width: 200px;
+  margin-left: auto;
   font-size: 16px;
 }
-.user-block__timework span {
+.user-block__timework span,
+.user-block__tell {
   display: block;
   font-size: 14px;
   line-height: 16px;
@@ -506,18 +513,17 @@
   color: $link;
   font-weight: 700;
   margin-bottom: 5px;
+  text-align: right;
 }
 .user-block__tell {
-  color: $link;
   font-size: 22px;
   line-height: 24px;
-  font-family: $roboto-bold;
   text-decoration: none;
-  font-weight: 700;
+  margin-bottom: 0;
 }
-#search-field:hover  #search-form,
-#login-field:hover #login-form,
-#basket-field:hover #basket-form {
+#search-field-open:hover  #search-form,
+#login-field-open:hover #login-form,
+#basket-field-open:hover #basket-form {
   display: block;
 }
 .catalog-page .site-wrapper {

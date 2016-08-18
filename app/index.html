@@ -18,79 +18,84 @@
   <div class="site-wrapper">
     <header class="page-header">
       <div class="container">
-        <a href="#" class="logo">
-          <img class="logo__link" src="img/gllacy-logo.svg" width="153" height="63" alt="логотип">
-        </a>
-        <!-- end logo -->
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item" id="nav__link">
-              <a class="nav__link nav__link--show nav__link--active" href="catalog.html">Каталог</a>
-              <ul class="supnav" id="supnav">
-                <li class="supnav__item">
-                  <a class="supnav__link" href="#">Новинки</a>
-                </li>
-                <li class="supnav__item">
-                  <a class="supnav__link" href="catalog.html">Сливочное</a>
-                </li>
-                <li class="supnav__item">
-                  <a class="supnav__link supnav__link--active" href="#">Щербеты</a>
-                </li>
-                <li class="supnav__item">
-                  <a class="supnav__link" href="#">Фруктовый лед</a>
-                </li>
-                <li class="supnav__item">
-                  <a class="supnav__link" href="#">Мелорин</a>
-                </li>
-              </ul>
+        <div class="top-line">
+          <a href="#" class="logo">
+            <img class="logo__link" src="img/gllacy-logo.svg" width="153" height="63" alt="логотип">
+          </a>
+          <!-- end logo -->
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item" id="nav__link">
+                <a class="nav__link nav__link--show nav__link--active" href="catalog.html">Каталог</a>
+                <ul class="supnav" id="supnav">
+                  <li class="supnav__item">
+                    <a class="supnav__link" href="#">Новинки</a>
+                  </li>
+                  <li class="supnav__item">
+                    <a class="supnav__link" href="catalog.html">Сливочное</a>
+                  </li>
+                  <li class="supnav__item">
+                    <a class="supnav__link supnav__link--active" href="#">Щербеты</a>
+                  </li>
+                  <li class="supnav__item">
+                    <a class="supnav__link" href="#">Фруктовый лед</a>
+                  </li>
+                  <li class="supnav__item">
+                    <a class="supnav__link" href="#">Мелорин</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Доставка и оплата</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">О Компании</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- end nav -->
+          <ul class="user-block">
+            <li class="user-block__item" id="search-field-open">
+              <i class="user-block__search-icon">Поиск</i>
+            <!-- </li> -->
+              <form class="user-block__search-form" action="#" method="post" id="search-form">
+                <input type="search" name="search-btn" id="search-field" placeholder="Что ищем?">
+                <label for="search-field">Что ищем?</label>
+              </form>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">Доставка и оплата</a>
+            <!-- end user-block__search -->
+            <li class="user-block__item" id="login-field-open">
+              <a href="#" class="user-block__login">Вход</a>
+              <!-- id="login-field" -->
+
+              <form class="user-block__login-form" action="#" method="get" id="login-form">
+                <input type="email" name="email" id="email-field" placeholder="Электронная почта" required>
+                <label class="login-form__label-email" for="email-field">Электронная почта</label>
+
+                <input type="password" name="password" id="password-field" placeholder="Пароль" required>
+                <label class="login-form__label-pass" for="password-field">Пароль</label>
+
+                <button class="login-form__form-btn" type="submit">Войти</button>
+                <a class="login-form__link-forgot" href="#">Забыли пароль?</a>
+                <a class="login-form__new-account-link" href="#">Новая регистрация</a>
+              </form>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">О Компании</a>
+            <!-- end user-block__login -->
+            <li class="user-block__item">
+              <a href="#" class="user-block__basket">Пусто</a>
             </li>
+            <!-- end user-block__basket -->
           </ul>
-        </nav>
-        <!-- end nav -->
-        <ul class="user-block">
-          <li class="user-block__item" id="search-field">
-            <i class="user-block__search-icon">Поиск</i>
-          <!-- </li> -->
-            <form class="user-block__search-form" action="#" method="post" id="search-form">
-              <input type="search" name="search-btn" id="search-field" placeholder="Что ищем?">
-              <label for="search-field">Что ищем?</label>
-            </form>
-          </li>
-          <!-- end user-block__search -->
-          <li class="user-block__item" id="login-field">
-            <a href="#" class="user-block__login" >Вход</a>
-            <!-- id="login-field" -->
-
-            <form class="user-block__login-form" action="#" method="get" id="login-form">
-              <input type="email" name="email" id="email-field" placeholder="Электронная почта" required>
-              <label class="login-form__label-email" for="email-field">Электронная почта</label>
-
-              <input type="password" name="password" id="password-field" placeholder="Пароль" required>
-              <label class="login-form__label-pass" for="password-field">Пароль</label>
-
-              <button class="login-form__form-btn" type="submit">Войти</button>
-              <a class="login-form__link-forgot" href="#">Забыли пароль?</a>
-              <a class="login-form__new-account-link" href="#">Новая регистрация</a>
-            </form>
-          </li>
-          <!-- end user-block__login -->
-          <li class="user-block__item">
-            <a href="#" class="user-block__basket">Пусто</a>
-          </li>
-          <!-- end user-block__basket -->
+        </div>
+        <!-- end top-line -->
+        <div class="bottom-line">
           <div class="user-block__timework">
             <span>С 10 до 20, ежедневно</span>
             <a class="user-block__tell" href="tel:88124502525">8 812 450-25-25</a>
           </div>
           <!-- end user-block__timework -->
-        </ul>
-
+        </div>
+        <!-- end bottom-line -->
       </div>
     </header>
     <main class="page-content">
@@ -285,11 +290,11 @@
     <form class="feedback-form" action="#" method="post">
       <input type="text" name="name" id="name-field" placeholder="Как вас зовут?">
       <label for="name-field">Как вас зовут?</label>
-      <input type="email" name="email" id="email-field" placeholder="Ваша почта для ответа?">
+      <input type="email" name="email" id="email-field-feedback" placeholder="Ваша почта для ответа?">
       <label for="email-field">Ваша почта для ответа?</label>
       <textarea name="review" rows="5" cols="40" id="feedback-area-field" placeholder="Напишите что-нибудь..."></textarea>
       <label for="feedback-area-field">Напишите что-нибудь...</label>
-      <button class="feedback-btn" type="sumbit">Отправить</button>
+      <button class="feedback-btn" type="button">Отправить</button>
     </form>
   </div>
   <div class="modal-overlay"></div>
