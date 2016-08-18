@@ -322,6 +322,176 @@
     transition: none;
   }
 }
+.user-block__basket-form {
+  margin: 0;
+  border: 0;
+  outline: 0;
+  display: none;
+  z-index: 35;
+  position: absolute;
+  width: 540px;
+  top: 44px;
+  right: 0px;
+  padding: 20px 15px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.basket-form__list {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+  border-bottom: 1px solid #cacac7;
+}
+.basket-form__item {
+  @include clearfix();
+  position: relative;
+  min-height: 34px;
+  margin-bottom: 20px;
+  padding-left: 28px;
+  font-size: 14px;
+}
+.basket-form__cancel {
+  position: absolute;
+  top: 12px;
+  left: 0px;
+  width: 11px;
+  height: 11px;
+  font-size: 0;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background-color: transparent;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    width: 11px;
+    height: 1px;
+    background-color: #7e7e7d;
+    border-radius: 1px;
+    transform: rotate(45deg);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    width: 11px;
+    height: 1px;
+    background-color: #7e7e7d;
+    border-radius: 1px;
+    transform: rotate(-45deg);
+  }
+}
+.basket-form__img {
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+  margin-right: 14px;
+}
+.basket-form__desc {
+  margin: 0;
+  padding: 0;
+  max-width: 216px;
+  float: left;
+  margin-right: 32px;
+  padding: 9px 0;
+  font-size: 13px;
+  line-height: 16px;
+  font-family: $roboto-regular;
+  font-weight: 400;
+  color: $link2;
+}
+.basket-form__position,
+.basket-form__price {
+  max-width: 105px;
+  float: left;
+  margin-right: 15px;
+  padding: 9px 0;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  font-family: $roboto-regular;
+  color: #333;
+  & .basket-form__number,
+  .basket-form__size,
+  .basket-form__value {
+    margin: 0;
+    display: inline-block;
+    vertical-align: baseline;
+    line-height: 16px;
+  }
+  & .basket-form__number,
+  .basket-form__size {
+    color: #333;
+  }
+  & .basket-form__value {
+    color: #999;
+  }
+}
+.basket-form__price {
+  float: right;
+  max-width: 55px;
+  margin-right: 20px;
+  @include clearfix();
+}
+.basket-form__total {
+  display: block;
+  max-width: 140px;
+  margin-left: auto;
+  padding: 17px 0;
+  margin-bottom: 18px;
+  font-size: 15px;
+  line-height: 18px;
+  font-family: $roboto-bold;
+  font-weight: 700;
+  color: #333;
+}
+.basket-form-total__text,
+.basket-form-total__number,
+.basket-form-total__currency {
+  float: left;
+  margin: 0;
+  margin-right: 5px;
+}
+.basket-form__form-btn {
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+  padding: 10px 13px;
+  color: $button-textcolor;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  font-family: $roboto-bold;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 100px;
+  text-overflow: ellipsis;
+  @include button-background;
+  @include button-box-shadow;
+  @include button-text-shadow;
+  cursor: pointer;
+  box-sizing: border-box;
+  outline: none;
+  border: 0;
+  &:hover {
+    color: $button-textcolor;
+    @include button-background-hover;
+    @include button-box-shadow-hover;
+    transition: all 0.8s ease 0s;
+  }
+  &:active {
+    color: $button-textcolor-active;
+    @include button-background-active;
+    @include button-box-shadow-active;
+  }
+}
 .user-block__timework {
   max-width: 100%;
   float: right;
@@ -346,7 +516,8 @@
   font-weight: 700;
 }
 #search-field:hover  #search-form,
-#login-field:hover #login-form {
+#login-field:hover #login-form,
+#basket-field:hover #basket-form {
   display: block;
 }
 .catalog-page .site-wrapper {

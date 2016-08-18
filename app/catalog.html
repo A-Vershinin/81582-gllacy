@@ -77,8 +77,40 @@
             </form>
           </li>
           <!-- end user-block__login -->
-          <li class="user-block__item">
+          <li class="user-block__item" id="basket-field">
             <a href="#" class="user-block__basket"><span>2</span>товара</a>
+            <form class="user-block__basket-form" action="#" method="get" id="basket-form">
+              <ul class="basket-form__list">
+                <li class="basket-form__item">
+                  <button class="basket-form__cancel" type="button">Отменить</button>
+                  <img class="basket-form__img" src="img/pict/small-goods1.png" width="33" height="33" alt="фото товара №1">
+                  <p class="basket-form__desc">Пломбир с апельсиновым джемом</p>
+                  <div class="basket-form__position">
+                    <span class="basket-form__number">1,5</span>
+                    <p class="basket-form__size">кг х</p>
+                    <p class="basket-form__value">200 руб.</p>
+                  </div>
+                  <div class="basket-form__price">300 руб</div>
+                </li>
+                <li class="basket-form__item">
+                  <button class="basket-form__cancel" type="button">Отменить</button>
+                  <img class="basket-form__img" src="img/pict/small-goods2.png" width="33" height="33" alt="фото товара №1">
+                  <p class="basket-form__desc">Клубничный пломбир с присыпкой из белого шоколада</p>
+                  <div class="basket-form__position">
+                    <span class="basket-form__number">1,5</span>
+                    <p class="basket-form__size">кг х</p>
+                    <p class="basket-form__value">300 руб.</p>
+                  </div>
+                  <div class="basket-form__price">450 <span>руб</span></div>
+                </li>
+              </ul>
+              <div class="basket-form__total">
+                <p class="basket-form-total__text">Итого:</p>
+                <span class="basket-form-total__number">750</span>
+                <p class="basket-form-total__currency">руб.</p>
+              </div>
+              <button class="basket-form__form-btn" type="submit">Оформить заказ</button>
+            </form>
           </li>
           <!-- end user-block__basket -->
           <div class="user-block__timework">
@@ -144,40 +176,42 @@
           <div class="filter-fatness">
             <fieldset>
             <legend class="filter-fatness__title">Жирность</legend>
+            <div class="filter-fatness__poits">
+              <input type="radio" name="group-one" id="first-value-field">
+              <label for="first-value-field">0%</label>
 
-            <input type="radio" name="group-one" id="first-value-field">
-            <label for="first-value-field">0%</label>
+              <input type="radio" name="group-one" id="second-value-field" checked>
+              <label for="second-value-field">до 10%</label>
 
-            <input type="radio" name="group-one" id="second-value-field" checked>
-            <label for="second-value-field">до 10%</label>
+              <input type="radio" name="group-one" id="third-value-field">
+              <label for="third-value-field">до 30%</label>
 
-            <input type="radio" name="group-one" id="third-value-field">
-            <label for="third-value-field">до 30%</label>
-
-            <input type="radio" name="group-one" id="fourth-value-field">
-            <label for="fourth-value-field">выше 30%</label>
+              <input type="radio" name="group-one" id="fourth-value-field">
+              <label for="fourth-value-field">выше 30%</label>
+            </div>
             </fieldset>
           </div>
           <!-- наполнители -->
           <div class="filter-fillers">
             <fieldset>
             <legend class="filter-fillers__title">Наполнители</legend>
+            <div class="filter-fillers__poits">
+              <input type="checkbox" name="filler-one" id="filler-one-field" checked>
+              <label for="filler-one-field">шоколадные</label>
 
-            <input type="checkbox" name="filler-one" id="filler-one-field" checked>
-            <label for="filler-one-field">шоколадные</label>
+              <input type="checkbox" name="filler-two" id="filler-two-field" checked>
+              <label for="filler-two-field">сахарные присыпки</label>
 
-            <input type="checkbox" name="filler-two" id="filler-two-field" checked>
-            <label for="filler-two-field">сахарные присыпки</label>
+              <input type="checkbox" name="filler-three" id="filler-three-field">
+              <label for="filler-three-field">фрукты</label>
 
-            <input type="checkbox" name="filler-three" id="filler-three-field">
-            <label for="filler-three-field">фрукты</label>
+              <input type="checkbox" name="filler-four" id="filler-four-field">
+              <label for="filler-four-field">сиропы</label>
 
-            <input type="checkbox" name="filler-four" id="filler-four-field">
-            <label for="filler-four-field">сиропы</label>
-
-            <input type="checkbox" name="filler-five" id="filler-five-field">
-            <label for="filler-five-field">джемы</label>
-                </fieldset>
+              <input type="checkbox" name="filler-five" id="filler-five-field">
+              <label for="filler-five-field">джемы</label>
+            </div>
+            </fieldset>
           </div>
 
           <button class="filter-form__btn" type="submit">Применить</button>
@@ -186,43 +220,133 @@
       <!-- end filter -->
       <section class="catalog">
         <div class="catalog__item">
-          <img src="http://placehold.it/267x267" width="267" height="267" alt="фото товара №1">
-          <span class="catalog__item--price">310<i></i>/кг</span>
-          <p class="catalog__item--text">Сливочное с
-            апельсиновым джемом и цитрусовой стружкой
-          </p>
-          <a class="catalog__item--link" href="#">Быстрый просмотр</a>
+          <div class="catalog__info">
+            <img class="catalog__img" src="img/pict/goods1.png" width="267" height="267" alt="фото товара №1">
+            <span class="catalog__price"><span>310</span><span>/кг</span></span>
+            <p class="catalog__text">Сливочное с
+              апельсиновым джемом и цитрусовой стружкой</p>
+          </div>
+          <div class="catalog__btn-view">
+            <a class="catalog__btn" href="#">Быстрый просмотр</a>
+          </div>
         </div>
         <div class="catalog__item">
-          <img src="http://placehold.it/267x267" width="267" height="267" alt="фото товара №2">
-          <span class="catalog__item--price">310<i></i>/кг</span>
-          <p class="catalog__item--text">Сливочное с
-            апельсиновым джемом и цитрусовой стружкой
-          </p>
-          <a class="catalog__item--link" href="#">Быстрый просмотр</a>
+          <div class="catalog__info">
+            <img class="catalog__img" src="img/pict/goods2.png" width="267" height="267" alt="фото товара №1">
+            <span class="catalog__price"><span>380</span><span>/кг</span></span>
+            <p class="catalog__text">Сливочно-кофейное с кусочками шоколада</p>
+          </div>
+          <div class="catalog__btn-view">
+            <a class="catalog__btn" href="#">Быстрый просмотр</a>
+          </div>
         </div>
         <div class="catalog__item">
-          <img src="http://placehold.it/267x267" width="267" height="267" alt="фото товара №3">
-          <span class="catalog__item--price">310<i></i>/кг</span>
-          <p class="catalog__item--text">Сливочное с
-            апельсиновым джемом и цитрусовой стружкой
-          </p>
-          <a class="catalog__item--link" href="#">Быстрый просмотр</a>
+          <div class="catalog__info">
+            <img class="catalog__img" src="img/pict/goods3.png" width="267" height="267" alt="фото товара №1">
+            <span class="catalog__price"><span>355</span><span>/кг</span></span>
+            <p class="catalog__text">Сливочно-клубничное с присыпкой из белого шоколада</p>
+          </div>
+          <div class="catalog__btn-view">
+            <a class="catalog__btn" href="#">Быстрый просмотр</a>
+          </div>
         </div>
         <div class="catalog__item">
-          <img src="http://placehold.it/267x267" width="267" height="267" alt="фото товара №4">
-          <span class="catalog__item--price">310<i></i>/кг</span>
-          <p class="catalog__item--text">Сливочное с
-            апельсиновым джемом и цитрусовой стружкой
-          </p>
-          <a class="catalog__item--link" href="#">Быстрый просмотр</a>
+          <div class="catalog__info">
+            <img class="catalog__img" src="img/pict/goods4.png" width="267" height="267" alt="фото товара №1">
+            <span class="catalog__price"><span>415</span><span>/кг</span></span>
+            <p class="catalog__text">Сливочное крем-брюле с карамельной подливкой</p>
+          </div>
+          <div class="catalog__btn-view">
+            <a class="catalog__btn" href="#">Быстрый просмотр</a>
+          </div>
+        </div>
+        <div class="catalog__item">
+          <div class="catalog__info">
+            <img class="catalog__img" src="img/pict/goods5.png" width="267" height="267" alt="фото товара №1">
+            <span class="catalog__price"><span>325</span><span>/кг</span></span>
+            <p class="catalog__text">Сливочное с брусничным джемом</p>
+          </div>
+          <div class="catalog__btn-view">
+            <a class="catalog__btn" href="#">Быстрый просмотр</a>
+          </div>
+        </div>
+        <div class="catalog__item">
+          <div class="catalog__info">
+            <img class="catalog__img" src="img/pict/goods6.png" width="267" height="267" alt="фото товара №1">
+            <span class="catalog__price"><span>410</span><span>/кг</span></span>
+            <p class="catalog__text">Сливочно-черничное с цельными ягодами черники </p>
+          </div>
+          <div class="catalog__btn-view">
+            <a class="catalog__btn" href="#">Быстрый просмотр</a>
+          </div>
+        </div>
+        <div class="catalog__item">
+          <div class="catalog__info">
+            <img class="catalog__img" src="img/pict/goods7.png" width="267" height="267" alt="фото товара №1">
+            <span class="catalog__price"><span>375</span><span>/кг</span></span>
+            <p class="catalog__text">Сливочно-лимонное с карамельной присыпкой</p>
+          </div>
+          <div class="catalog__btn-view">
+            <a class="catalog__btn" href="#">Быстрый просмотр</a>
+          </div>
+        </div>
+        <div class="catalog__item">
+          <div class="catalog__info">
+            <img class="catalog__img" src="img/pict/goods8.png" width="267" height="267" alt="фото товара №1">
+            <span class="catalog__price"><span>320</span><span>/кг</span></span>
+            <p class="catalog__text">Сливочное с шоколадной стружкой
+            </p>
+          </div>
+          <div class="catalog__btn-view">
+            <a class="catalog__btn" href="#">Быстрый просмотр</a>
+          </div>
+        </div>
+        <div class="catalog__item">
+          <div class="catalog__info">
+            <img class="catalog__img" src="img/pict/goods9.png" width="267" height="267" alt="фото товара №1">
+            <span class="catalog__price"><span>440</span><span>/кг</span></span>
+            <p class="catalog__text">Сливочно-ванильное с кусочками шоколада</p>
+          </div>
+          <div class="catalog__btn-view">
+            <a class="catalog__btn" href="#">Быстрый просмотр</a>
+          </div>
+        </div>
+        <div class="catalog__item">
+          <div class="catalog__info">
+            <img class="catalog__img" src="img/pict/goods10.png" width="267" height="267" alt="фото товара №1">
+            <span class="catalog__price"><span>435</span><span>/кг</span></span>
+            <p class="catalog__text">Сливочноe с ментоловым сиропом</p>
+          </div>
+          <div class="catalog__btn-view">
+            <a class="catalog__btn" href="#">Быстрый просмотр</a>
+          </div>
+        </div>
+        <div class="catalog__item">
+          <div class="catalog__info">
+            <img class="catalog__img" src="img/pict/goods11.png" width="267" height="267" alt="фото товара №1">
+            <span class="catalog__price"><span>355</span><span>/кг</span></span>
+            <p class="catalog__text">Сливочное с кусочками черного шоколада</p>
+          </div>
+          <div class="catalog__btn-view">
+            <a class="catalog__btn" href="#">Быстрый просмотр</a>
+          </div>
+        </div>
+        <div class="catalog__item">
+          <div class="catalog__info">
+            <img class="catalog__img" src="img/pict/goods12.png" width="267" height="267" alt="фото товара №1">
+            <span class="catalog__price"><span>420</span><span>/кг</span></span>
+            <p class="catalog__text">Сливочное с мятным сиропом</p>
+          </div>
+          <div class="catalog__btn-view">
+            <a class="catalog__btn" href="#">Быстрый просмотр</a>
+          </div>
         </div>
       </section>
       <!-- end catalog -->
       <section class="pagination">
         <ul class="pagination__list">
           <li class="pagination__item">
-            <a class="pagination__link pagination__link--active" href="#">1</a>
+            <a class="pagination__link pagination__link--current" href="#">1</a>
           </li>
           <li class="pagination__item">
             <a class="pagination__link" href="#">2</a>
@@ -275,6 +399,7 @@
     <!-- end container -->
   </footer>
   </div>
+
   <!-- end site-wrapper -->
   <!-- Query -->
   <!-- Plugins Query.js -->
