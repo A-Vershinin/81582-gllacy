@@ -1,8 +1,12 @@
 .container {
+  max-width: $desktop-widths;
   max-width: 1146px;
-  min-width: 900px;
+  // max-width: 1200px;
+  // min-width: 900px;
+
   margin: 0 auto;
   padding: 0 2.3%;
+  // box-sizing: border-box;
 }
 // – Внутренние отступы слева и справа для обоих страницы — по 2.3% от ширины всей контентной области.
 // - Отступы между колонками сетки одинаковые — по 2.2% от ширины всей контентной области.

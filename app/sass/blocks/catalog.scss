@@ -29,7 +29,7 @@
       transition: all 0.8s ease 0s;
     }
     .catalog__price {
-      bottom: 65px;
+      bottom: 8px;
     }
     .catalog__btn-view {
         visibility: visible
@@ -66,7 +66,7 @@
   }
   & .catalog__price {
     position: absolute;
-    bottom: 65px;
+    bottom: 8px;
     left: 0;
     margin: 0;
     font-size: 45px;
@@ -96,20 +96,20 @@
       font-size: 30px;
     }
   }
-  & .catalog__text {
-    margin: 0;
-    min-height: 40px;
-    font-size: 16px;
-    line-height: 22px;
-    font-weight: 500;
-    font-family: $roboto-medium;
-    color: $link;
-    text-align: center;
-    text-decoration: underline;
-    -webkit-text-decoration-color: rgba(0,0,0,.2);
-    text-decoration-color: rgba(0,0,0,.2);
-
-  }
+}
+.catalog__text {
+  margin: 0;
+  min-height: 44px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  font-family: $roboto-medium;
+  color: $link;
+  text-align: center;
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgba(0,0,0,.2);
+  text-decoration-color: rgba(0,0,0,.2);
 }
 .catalog__btn-view {
   width: 100%;

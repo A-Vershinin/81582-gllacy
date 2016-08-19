@@ -30,7 +30,7 @@
       transition: all 0.8s ease 0s;
     }
     .goods__price {
-      bottom: 65px;
+      bottom: 23px;
     }
     .goods__btn-view {
         visibility: visible
@@ -67,11 +67,10 @@
 }
 .goods__info {
   position: relative;
-  margin-bottom: 10px;
 }
 .goods__price {
   position: absolute;
-  bottom: 65px;
+  bottom: 23px;
   left: 0;
   margin: 0;
   font-size: 45px;
@@ -103,7 +102,8 @@
 }
 .goods__text {
   margin: 0;
-  min-height: 40px;
+  min-height: 44px;
+  margin-bottom: 10px;
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
