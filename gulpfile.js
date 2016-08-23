@@ -11,7 +11,7 @@ var rename = require("gulp-rename"); //Подключаем плагин для 
 var imagemin = require("gulp-imagemin"); //Подключаем плагин для сжатия картинок
 var svgmin = require("gulp-svgmin"); //Подключаем плагин для сжатия svg
 var svgstore = require("gulp-svgstore"); //Подключаем для создания svg-спрайта
-var concat = require("gulp-concat") // для конкатинации файлов
+var concat = require("gulp-concat") // для склеивания файлов
 var uglify = require("gulp-uglifyjs") //для сжатия всех скриптов
 var mqpacker = require("css-mqpacker");
 var run = require("run-sequence"); //Плагин для последовательной работы тасков
@@ -47,9 +47,17 @@ gulp.task("style", function() { //Создаём таск "style"
     .pipe(sass())   //Преобразуем Sass в CSS
     // .pipe(gulp.dest("app/css"))  //Выгружаем результаты в папку app/css
     .pipe(gulp.dest("build/css"))  //Выгружаем результаты в папку build/css
-    .pipe(rename("libs.min.css")) //переименовываем файл libs в libs.min
-    .pipe(gulp.dest("build/css")) //выгружаем в build/css
     .pipe(server.reload({stream: true})); //После сборки делаем перезагрузку страницы
+});
+
+gulp.task("copyOnChange", function () {
+  return gulp.src("app/**/*.*"
+  // {
+  //   base: "app"     // вот тут ошибка
+  // }
+)
+    .pipe(gulp.dest("build"));
+    // .pipe(server.reload({stream: true}));
 });
 
 gulp.task("serve",  function() {
@@ -58,16 +66,18 @@ gulp.task("serve",  function() {
     notify: false,
     open: true,
     ui: false
-  });
+});
 
   gulp.watch("app/sass/**/*.{scss,sass}", ["style"]);  //Наблюдение за scss файлами в папке scss
   gulp.watch("app/js/**/*.js");  //Наблюдение за js файлами в папке проекта
+  // gulp.watch("app/**/*.*", gulp.task("copyOnChange"));
+  // gulp.watch("app/**/*.*", ["copyOnChange"]);
   gulp.watch("app/*.html").on("change", server.reload); //Наблюдение за html файлами в папке проекта
 });
+
 // ====================================================
 // ====================================================
 // ================= Сборка проекта BUILD =============
-
 // Чистка папки
 gulp.task("clean", function () {
   return del("build");
@@ -97,7 +107,7 @@ gulp.task("images", function () {
 // Оптимизируем svg картинки и собираем спрайт
 gulp.task("svg-symbols", function() {
   return gulp.src("build/img/icons/*.svg")
-    .pipe(svgmin())
+    // .pipe(svgmin())
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -112,30 +122,27 @@ gulp.task("extras", function () {
   ])
   .pipe(gulp.dest("build"));
 });
-// Подключаем минифицированные js-библиотеки
+// Оптимизируем js-библиотеки
 gulp.task("js-libs", function() {
-  return gulp.src([
-    "app/libs/jquery/dist/jquery.min.js",
-    "app/libs/magnific-popup/dist/jquery.magnific-popup.min.js",
-  ])
+  return gulp.src("app/libs/**/*.js") //берём все файлы .js в app/libs
   .pipe(concat("libs.min.js"))
-  .pipe(uglify())
-  .pipe(gulp.dest("app/js"));
+  .pipe(uglify())  //cжимаем libs.css
+  .pipe(gulp.dest("build/js"));
 });
-//Подключаем минифицированные css-библиотеки
+//Оптимизируем css-библиотеки
 gulp.task("css-libs", function() {
-  return gulp.src("app/css/libs.css") //берём файл в app/css .. какой таск делает этот файл и ложит в css?
+  return gulp.src("build/css/libs.css") //берём файл в build/css
   .pipe(minify()) //минифицируем libs.css
   .pipe(rename("libs.min.css")) //переименовываем файл style в libs.min.css
-  .pipe(gulp.dest("app/css")) //выгружаем в app/css
-})
+  .pipe(gulp.dest("build/css")) //выгружаем в build/css
+});
 // Собираем папку BUILD
 gulp.task("build", function (fn) {
   run(
     "clean",
     "copy",
     "style",
-    "images",
+    // "images",
     "svg-symbols",
     "js-libs",
     "css-libs",

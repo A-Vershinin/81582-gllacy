@@ -1,3 +1,5 @@
+
+
 /* переменные цветом и типографики*/
 $base-color: #323232;
 $base-bg-color: #3bb09d;
@@ -68,8 +70,13 @@ $bg-supnav-onpage-hover: #d07058;
 
 
 
-$tablet-widths: "(min-width: 768px)";
-$tablet-widths: "(min-width: 900px)"; // временно
-$desktop-widths: "(max-width: 1146px)";
+$desktop-widths: "(max-width: 960px)";
+$tablet-widths: "(max-width: 768px)";
+$phone-widths: "(max-width: 480px)";
+
+$desktop-max-widths: 1146px;
+$tablet-max-widths: 560px;
+$phone-max-widths: 420px;
+
 
 $retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";

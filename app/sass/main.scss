@@ -1,6 +1,6 @@
 /*Общие стили*/
 body {
-
+  min-width: 320px;
   margin: 0;
   color: $base-color;
   background-color: $base-bg-color;
@@ -75,4 +75,9 @@ textarea:focus {
 }
 textarea:invalid {
   color: #f0b1b1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
