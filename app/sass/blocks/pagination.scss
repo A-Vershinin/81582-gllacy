@@ -24,12 +24,12 @@
   }
   &:before {
     left: 0;
-    background: url("../../img/icons/icon-arrow-left.svg") no-repeat center;
+    background: url("../img/icons/icon-arrow-left.svg") no-repeat center;
     opacity: 0.2;
   }
   &::after {
     right: 0;
-    background: url("../../img/icons/icon-arrow-right.svg") no-repeat center;
+    background: url("../img/icons/icon-arrow-right.svg") no-repeat center;
   }
 }
 .pagination__item {

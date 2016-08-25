@@ -97,7 +97,15 @@
                 <ul class="basket-form__list">
                   <li class="basket-form__item">
                     <button class="basket-form__cancel" type="button">Отменить</button>
-                    <img class="basket-form__img" src="img/pict/small-goods1.png" width="33" height="33" alt="фото товара №1">
+                    <picture>
+                      <source media="(max-width: 768px)" srcset="img/pict/small-goods1@1x.png, img/pict/small-goods1@2x.png">
+                      <source media="(max-width: 480px)" srcset="img/pict/small-goods1@1x.png, img/pict/small-goods1@2x.png">
+                      <img
+                        class="basket-form__img"
+                        src="img/pict/small-goods1@1x.png"
+                        srcset="img/pict/small-goods1@2x.png"
+                        alt="фото товара №1">
+                    </picture>
                     <p class="basket-form__desc">Пломбир с апельсиновым джемом</p>
                     <div class="basket-form__position">
                       <span class="basket-form__number">1,5</span>
@@ -108,7 +116,20 @@
                   </li>
                   <li class="basket-form__item">
                     <button class="basket-form__cancel" type="button">Отменить</button>
-                    <img class="basket-form__img" src="img/pict/small-goods2.png" width="33" height="33" alt="фото товара №2">
+                    <img
+                      class="basket-form__img"
+                      src="img/pict/small-goods2@1x.png"
+                      width="33" height="33"
+                      alt="фото товара №2">
+                    <picture>
+                      <source media="(max-width: 768px)" srcset="img/pict/small-goods2@1x.png, img/pict/small-goods2@2x.png">
+                      <source media="(max-width: 480px)" srcset="img/pict/small-goods2@1x.png, img/pict/small-goods2@2x.png">
+                      <img
+                        class="basket-form__img"
+                        src="img/pict/small-goods2@1x.png"
+                        srcset="img/pict/small-goods2@2x.png"
+                        alt="фото товара №2">
+                    </picture>
                     <p class="basket-form__desc">Клубничный пломбир с присыпкой из белого шоколада</p>
                     <div class="basket-form__position">
                       <span class="basket-form__number">1,5</span>
@@ -233,14 +254,22 @@
             </fieldset>
           </div>
 
-          <button class="filter-form__btn" type="submit">Применить</button>
+          <!-- <button class="filter-form__btn" type="submit">Применить</button> -->
+          <input class="filter-form__btn" type="submit" value="Применить"></input>
         </form>
       </section>
       <!-- end filter -->
       <section class="catalog">
         <div class="catalog__item">
           <div class="catalog__info">
-            <img class="catalog__img" src="img/pict/goods1.png" width="267" height="267" alt="фото товара №1">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/pict/goods1.png, img/pict/goods1@2x.png">
+              <source media="(max-width: 480px)" srcset="img/pict/goods1.png, img/pict/goods1@2x.png">
+              <img class="goods__img"
+                  src="img/pict/goods1.png"
+                  srcset="img/pict/goods1@2x.png"
+                  alt="фото товара №1">
+            </picture>
             <span class="catalog__price"><span>310</span><span>/кг</span></span>
           </div>
           <p class="catalog__text">Сливочное с
@@ -251,7 +280,14 @@
         </div>
         <div class="catalog__item">
           <div class="catalog__info">
-            <img class="catalog__img" src="img/pict/goods2.png" width="267" height="267" alt="фото товара №1">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/pict/goods2.png, img/pict/goods2@2x.png">
+              <source media="(max-width: 480px)" srcset="img/pict/goods2.png, img/pict/goods2@2x.png">
+              <img class="goods__img"
+                  src="img/pict/goods2.png"
+                  srcset="img/pict/goods2@2x.png"
+                  alt="фото товара №2">
+            </picture>
             <span class="catalog__price"><span>380</span><span>/кг</span></span>
           </div>
           <p class="catalog__text">Сливочно-кофейное с кусочками шоколада</p>
@@ -261,7 +297,14 @@
         </div>
         <div class="catalog__item">
           <div class="catalog__info">
-            <img class="catalog__img" src="img/pict/goods3.png" width="267" height="267" alt="фото товара №1">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/pict/goods3.png, img/pict/goods3@2x.png">
+              <source media="(max-width: 480px)" srcset="img/pict/goods3.png, img/pict/goods3@2x.png">
+              <img class="goods__img"
+                  src="img/pict/goods3.png"
+                  srcset="img/pict/goods3@2x.png"
+                  alt="фото товара №3">
+            </picture>
             <span class="catalog__price"><span>355</span><span>/кг</span></span>
           </div>
           <p class="catalog__text">Сливочно-клубничное с присыпкой из белого шоколада</p>
@@ -271,7 +314,14 @@
         </div>
         <div class="catalog__item">
           <div class="catalog__info">
-            <img class="catalog__img" src="img/pict/goods4.png" width="267" height="267" alt="фото товара №1">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/pict/goods4.png, img/pict/goods4@2x.png">
+              <source media="(max-width: 480px)" srcset="img/pict/goods4.png, img/pict/goods4@2x.png">
+              <img class="goods__img"
+                  src="img/pict/goods4.png"
+                  srcset="img/pict/goods4@2x.png"
+                  alt="фото товара №4">
+            </picture>
             <span class="catalog__price"><span>415</span><span>/кг</span></span>
           </div>
           <p class="catalog__text">Сливочное крем-брюле с карамельной подливкой</p>
@@ -281,7 +331,14 @@
         </div>
         <div class="catalog__item">
           <div class="catalog__info">
-            <img class="catalog__img" src="img/pict/goods5.png" width="267" height="267" alt="фото товара №1">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/pict/goods5.png, img/pict/goods5@2x.png">
+              <source media="(max-width: 480px)" srcset="img/pict/goods5.png, img/pict/goods5@2x.png">
+              <img class="goods__img"
+                  src="img/pict/goods5.png"
+                  srcset="img/pict/goods5@2x.png"
+                  alt="фото товара №5">
+            </picture>
             <span class="catalog__price"><span>325</span><span>/кг</span></span>
           </div>
           <p class="catalog__text">Сливочное с брусничным джемом</p>
@@ -291,7 +348,14 @@
         </div>
         <div class="catalog__item">
           <div class="catalog__info">
-            <img class="catalog__img" src="img/pict/goods6.png" width="267" height="267" alt="фото товара №1">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/pict/goods6.png, img/pict/goods6@2x.png">
+              <source media="(max-width: 480px)" srcset="img/pict/goods6.png, img/pict/goods6@2x.png">
+              <img class="goods__img"
+                  src="img/pict/goods6.png"
+                  srcset="img/pict/goods6@2x.png"
+                  alt="фото товара №6">
+            </picture>
             <span class="catalog__price"><span>410</span><span>/кг</span></span>
           </div>
           <p class="catalog__text">Сливочно-черничное с цельными ягодами черники </p>
@@ -301,7 +365,14 @@
         </div>
         <div class="catalog__item">
           <div class="catalog__info">
-            <img class="catalog__img" src="img/pict/goods7.png" width="267" height="267" alt="фото товара №1">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/pict/goods7.png, img/pict/goods7@2x.png">
+              <source media="(max-width: 480px)" srcset="img/pict/goods7.png, img/pict/goods7@2x.png">
+              <img class="goods__img"
+                  src="img/pict/goods7.png"
+                  srcset="img/pict/goods7@2x.png"
+                  alt="фото товара №7">
+            </picture>
             <span class="catalog__price"><span>375</span><span>/кг</span></span>
           </div>
           <p class="catalog__text">Сливочно-лимонное с карамельной присыпкой</p>
@@ -311,7 +382,14 @@
         </div>
         <div class="catalog__item">
           <div class="catalog__info">
-            <img class="catalog__img" src="img/pict/goods8.png" width="267" height="267" alt="фото товара №1">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/pict/goods8.png, img/pict/goods8@2x.png">
+              <source media="(max-width: 480px)" srcset="img/pict/goods8.png, img/pict/goods8@2x.png">
+              <img class="goods__img"
+                  src="img/pict/goods8.png"
+                  srcset="img/pict/goods8@2x.png"
+                  alt="фото товара №8">
+            </picture>
             <span class="catalog__price"><span>320</span><span>/кг</span></span>
           </div>
             <p class="catalog__text">Сливочное с шоколадной стружкой</p>
@@ -321,7 +399,14 @@
         </div>
         <div class="catalog__item">
           <div class="catalog__info">
-            <img class="catalog__img" src="img/pict/goods9.png" width="267" height="267" alt="фото товара №1">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/pict/goods9.png, img/pict/goods9@2x.png">
+              <source media="(max-width: 480px)" srcset="img/pict/goods9.png, img/pict/goods9@2x.png">
+              <img class="goods__img"
+                  src="img/pict/goods9.png"
+                  srcset="img/pict/goods9@2x.png"
+                  alt="фото товара №9">
+            </picture>
             <span class="catalog__price"><span>440</span><span>/кг</span></span>
           </div>
           <p class="catalog__text">Сливочно-ванильное с кусочками шоколада</p>
@@ -331,7 +416,14 @@
         </div>
         <div class="catalog__item">
           <div class="catalog__info">
-            <img class="catalog__img" src="img/pict/goods10.png" width="267" height="267" alt="фото товара №1">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/pict/goods10.png, img/pict/goods10@2x.png">
+              <source media="(max-width: 480px)" srcset="img/pict/goods10.png, img/pict/goods10@2x.png">
+              <img class="goods__img"
+                  src="img/pict/goods10.png"
+                  srcset="img/pict/goods10@2x.png"
+                  alt="фото товара №10">
+            </picture>
             <span class="catalog__price"><span>435</span><span>/кг</span></span>
           </div>
           <p class="catalog__text">Сливочноe с ментоловым сиропом</p>
@@ -341,7 +433,14 @@
         </div>
         <div class="catalog__item">
           <div class="catalog__info">
-            <img class="catalog__img" src="img/pict/goods11.png" width="267" height="267" alt="фото товара №1">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/pict/goods11.png, img/pict/goods11@2x.png">
+              <source media="(max-width: 480px)" srcset="img/pict/goods11.png, img/pict/goods11@2x.png">
+              <img class="goods__img"
+                  src="img/pict/goods11.png"
+                  srcset="img/pict/goods11@2x.png"
+                  alt="фото товара №11">
+            </picture>
             <span class="catalog__price"><span>355</span><span>/кг</span></span>
           </div>
           <p class="catalog__text">Сливочное с кусочками черного шоколада</p>
@@ -351,7 +450,14 @@
         </div>
         <div class="catalog__item">
           <div class="catalog__info">
-            <img class="catalog__img" src="img/pict/goods12.png" width="267" height="267" alt="фото товара №1">
+            <picture>
+              <source media="(max-width: 768px)" srcset="img/pict/goods12.png, img/pict/goods12@2x.png">
+              <source media="(max-width: 480px)" srcset="img/pict/goods12.png, img/pict/goods12@2x.png">
+              <img class="goods__img"
+                  src="img/pict/goods12.png"
+                  srcset="img/pict/goods12@2x.png"
+                  alt="фото товара №12">
+            </picture>
             <span class="catalog__price"><span>420</span><span>/кг</span></span>
           </div>
           <p class="catalog__text">Сливочное с мятным сиропом</p>

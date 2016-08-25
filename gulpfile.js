@@ -20,9 +20,9 @@ var server = require("browser-sync"); //Подключаем браузер-си
 
 gulp.task("style", function() { //Создаём таск "style"
 
-  gulp.src(["app/sass/style.scss", "app/sass/libs.scss"])   //Берём файлы sass для обработки
+  gulp.src("app/sass/style.scss")   //Берём файлы sass для обработки
     .pipe(plumber()) //Запрещаем ошибкам прерывать скрипт
-    .pipe(sass())   //Преобразуем Sass в CSS
+    .pipe(sass({errLogToConsole: true}))   //Преобразуем Sass в CSS
     .pipe(postcss([  //Добавляем префиксы под разные версии
       autoprefixer({browsers: [
         "last 1 version",
@@ -44,20 +44,20 @@ gulp.task("style", function() { //Создаём таск "style"
 
   gulp.src("app/sass/libs.scss")
     .pipe(plumber()) //Запрещаем ошибкам прерывать скрипт
-    .pipe(sass())   //Преобразуем Sass в CSS
+    .pipe(sass({errLogToConsole: true}))   //Преобразуем Sass в CSS
     // .pipe(gulp.dest("app/css"))  //Выгружаем результаты в папку app/css
     .pipe(gulp.dest("build/css"))  //Выгружаем результаты в папку build/css
     .pipe(server.reload({stream: true})); //После сборки делаем перезагрузку страницы
 });
 
-gulp.task("copyOnChange", function () {
-  return gulp.src("app/**/*.*"
-  // {
-  //   base: "app"     // вот тут ошибка
-  // }
-)
-    .pipe(gulp.dest("build"));
-    // .pipe(server.reload({stream: true}));
+gulp.task("htmlChange", function () {
+  return gulp.src([
+    "app/*.html"
+  ], {
+    base: "app"
+  })
+    .pipe(gulp.dest("build"))
+    .pipe(server.reload({stream: true}));
 });
 
 gulp.task("serve",  function() {
@@ -70,11 +70,9 @@ gulp.task("serve",  function() {
 
   gulp.watch("app/sass/**/*.{scss,sass}", ["style"]);  //Наблюдение за scss файлами в папке scss
   gulp.watch("app/js/**/*.js");  //Наблюдение за js файлами в папке проекта
-  // gulp.watch("app/**/*.*", gulp.task("copyOnChange"));
-  // gulp.watch("app/**/*.*", ["copyOnChange"]);
-  gulp.watch("app/*.html").on("change", server.reload); //Наблюдение за html файлами в папке проекта
+  gulp.watch("app/*.html", ["htmlChange"]); //Наблюдение за html файлами в папке проекта
+  gulp.watch("build/**/*").on("change", server.reload);
 });
-
 // ====================================================
 // ====================================================
 // ================= Сборка проекта BUILD =============

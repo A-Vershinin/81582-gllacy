@@ -1,7 +1,8 @@
 .features {
   color: $base-color;
   background-color: green;
-  background: url("../../img/bg-vaf@1x.png");
+  background: transparent url("../img/bg-vaf@1x.png");
+  background-size: 69%;
   border-radius: 15px;
   margin-bottom: 40px;
 
@@ -45,16 +46,16 @@
   width: 47px;
   height: 47px;
   &--icecrem {
-    background: transparent url(../../img/icons/icon-icecream.svg) no-repeat;
+    background: transparent url(../img/icons/icon-icecream.svg) no-repeat;
   }
   &--cow {
-    background: transparent url(../../img/icons/icon-cow.svg) no-repeat;
+    background: transparent url(../img/icons/icon-cow.svg) no-repeat;
   }
   &--leaflet {
-    background: transparent url(../../img/icons/icon-leaflet.svg) no-repeat;
+    background: transparent url(../img/icons/icon-leaflet.svg) no-repeat;
   }
   &--thermo {
-    background: transparent url(../../img/icons/icon-thermo.svg) no-repeat;
+    background: transparent url(../img/icons/icon-thermo.svg) no-repeat;
   }
 }
 .features__text {
@@ -67,4 +68,9 @@
   line-height: 22px;
   color: $base-color;
   background-color: transparent;
+}
+@media #{$retina} {
+  .features {
+    background-image: url("../img/bg-vaf@2x.png");
+  }
 }
