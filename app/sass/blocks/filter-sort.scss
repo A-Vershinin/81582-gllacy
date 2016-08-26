@@ -15,6 +15,8 @@
   float: left;
   margin-right: 16px;
   margin-bottom: 10px;
+}
+.filter-sort {
   & select {
     position: relative;
     outline: 0;
@@ -47,14 +49,16 @@
       color: $link2;
       background-color: #fff;
     }
-    & option {
-      border: 0;
-      font-size: 14px;
-      line-height: 16px;
-      font-family: $roboto-regular;
-      font-weight: 500;
-      color: $link2;
-      background-color: transparent;
-    }
+  }
+}
+.filter-sort {
+  & option {
+    border: 0;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: $roboto-regular;
+    font-weight: 500;
+    color: $link2;
+    background-color: transparent;
   }
 }

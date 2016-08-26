@@ -1,4 +1,4 @@
-.slaider {
+.slider {
   position: relative;
   padding-top: 270px;
   text-align: center;
@@ -6,15 +6,15 @@
   background-color: transparent;
   margin-bottom: 50px;
 }
-.slaider__list {
+.slider__list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.slaider__item {
+.slider__item {
   display: none;
 }
-.slaider__title {
+.slider__title {
   width: 61%;
   margin: 0 auto;
   margin-bottom: 30px;
@@ -22,7 +22,7 @@
   line-height: 60px;
   font-weight: 800;
 }
-.slaider__btn {
+.slider__btn {
   display: inline-block;
   vertical-align: top;
   padding: 10px 40px;
@@ -51,12 +51,14 @@
     @include button-box-shadow-active;
   }
 }
-.slaider__controls {
+.slider__controls {
   position: absolute;
   bottom: 20px;
   left: 0;
   font-size: 0;
   z-index: 20;
+}
+.slider__controls {
     & label {
     display: inline-block;
     vertical-align: top;

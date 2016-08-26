@@ -3,33 +3,18 @@
   float: left;
   margin-right: 16px;
   margin-bottom: 10px;
+  color: $link;
 }
 .filter-custom__range {
   position: relative;
   max-width: 218px;
   height: 16px;
   margin-bottom: 6px;
-  color: $link;
+  color: #fff;
   background-color: transparent;
   padding-left: 15px;
-  & input[type="text"] {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    display: inline-block;
-    vertical-align: top;
-    width: 30px;
-    font-size: 14px;
-    line-height: 16px;
-    font-family: $roboto-medium;
-    font-weight: 500;
-    color: $link;
-    background-color: transparent;
-    text-align: center;
-    box-sizing: border-box;
-    border-radius: 0;
-  }
+}
+.filter-custom__range {
   & span {
     &:first-child {
       &::after {
@@ -47,6 +32,26 @@
     }
   }
 }
+.filter__price-field {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $roboto-medium;
+  font-weight: 500;
+  color: $link;
+  background-color: transparent;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 0;
+}
+
+
 .filter__price,
 .filter__currency {
   display: inline-block;
@@ -74,6 +79,8 @@
   margin-top: 16px;
   height: 4px;
   background-color: rgba(255,255,255,.5);
+}
+.filter__scale {
   & .filter__bar {
     width: 107px;
     height: 4px;

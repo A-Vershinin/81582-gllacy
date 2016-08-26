@@ -18,9 +18,13 @@
   transition: all 0.8s ease 0s;
   box-sizing: border-box;
   margin-bottom: -35px;
+}
+.goods__item {
   &:last-child {
     margin-right: 0;
   }
+}
+.goods__item {
   &:hover {
     .goods__text {
       text-decoration: none;
@@ -80,6 +84,8 @@
   color: $link;
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
   z-index: 5;
+}
+.goods__price  {
   & span:first-child {
     margin: 0;
     position: relative;

@@ -25,11 +25,12 @@ gulp.task("style", function() { //Создаём таск "style"
     .pipe(sass({errLogToConsole: true}))   //Преобразуем Sass в CSS
     .pipe(postcss([  //Добавляем префиксы под разные версии
       autoprefixer({browsers: [
-        "last 1 version",
-        "last 2 Chrome versions",
-        "last 2 Firefox versions",
-        "last 2 Opera versions",
-        "last 2 Edge versions"
+        // "last 2 version",
+        // "last 2 Chrome versions",
+        // "last 2 Firefox versions",
+        // "last 2 Opera versions",
+        // "last 2 Edge versions"
+        "last 2 version"
       ]}),
       mqpacker({
         sort: true //соеденяем все медиазапросы
@@ -105,7 +106,7 @@ gulp.task("images", function () {
 // Оптимизируем svg картинки и собираем спрайт
 gulp.task("svg-symbols", function() {
   return gulp.src("build/img/icons/*.svg")
-    // .pipe(svgmin())
+    .pipe(svgmin())
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -119,6 +120,13 @@ gulp.task("extras", function () {
     "!app/*.html"
   ])
   .pipe(gulp.dest("build"));
+});
+// Оптимизируем js-common
+gulp.task("js-common", function() {
+  return gulp.src("app/js/common.js") //берём файл common.js в app/js
+  .pipe(uglify())  //cжимаем libs.css
+  .pipe(rename("common.min.js")) //переименовываем файл common.js в common.min.js
+  .pipe(gulp.dest("build/js"))  //Выгружаем результаты в папку build/css
 });
 // Оптимизируем js-библиотеки
 gulp.task("js-libs", function() {
@@ -142,9 +150,26 @@ gulp.task("build", function (fn) {
     "style",
     // "images",
     "svg-symbols",
+    "js-common",
     "js-libs",
     "css-libs",
     "extras",
     fn
   );
 });
+// ====================================================
+// ====================================================
+// ===================== Функции ======================
+
+// Более наглядный вывод ошибок
+var log = function (error) {
+  console.log([
+    '',
+    "----------ERROR MESSAGE START----------",
+    ("[" + error.name + " in " + error.plugin + "]"),
+    error.message,
+    "----------ERROR MESSAGE END----------",
+    ''
+  ].join('\n'));
+  this.end();
+}

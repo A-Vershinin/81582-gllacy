@@ -34,6 +34,8 @@
   background-color: transparent;
   cursor: pointer;
   box-sizing: border-box;
+}
+.breadcrumbs__link {
   &::after {
     content: "";
     position: absolute;
@@ -56,12 +58,12 @@
   &--active {
     padding: 7px 10px;
     color: $link-nav--active;
-    background-color: $bg-nav-onpage;
+    background-color: transparent;
     border-radius: 15px;
     text-decoration: none;
     &:hover {
       color: $link-nav--active-hover;
-      background: $bg-nav-onpage-hover;
+      background: transparent;
     }
   }
 }

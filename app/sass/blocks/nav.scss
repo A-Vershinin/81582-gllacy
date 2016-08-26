@@ -15,8 +15,9 @@
   vertical-align: top;
   font-size: 16px;
   padding-bottom: 10px;
-
   padding-right: 20px;
+}
+.nav__item {
   &:first-child {
     padding-left: 10px;
   }
@@ -38,7 +39,8 @@
   text-decoration-color: rgba(0,0,0,.2);
   background-color: $bg-nav;
   cursor: pointer;
-
+}
+.nav__link {
   &:hover {
     color: $link-nav-hover;
     background-color: $bg-nav-hover;
@@ -69,6 +71,7 @@
     }
   }
 }
-#nav__link:hover  #supnav {
+
+.nav__item:hover  .supnav {
   display: block;
 }

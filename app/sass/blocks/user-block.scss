@@ -33,6 +33,8 @@
   border-radius: 5px;
   display: none;
   box-sizing: border-box;
+}
+.user-block__search-form {
   & label {
     font-size: 0;
   }
@@ -53,40 +55,42 @@
     text-overflow: ellipsis;
     outline: none;
     box-sizing: border-box;
+  }
+}
+.user-block__search-form input {
+  &::-webkit-input-placeholder {
+    color: $input-text-color;
+  }
+  &:-moz-placeholder {
+    color: $input-text-color;
+  }
+  &:-ms-input-placeholder {
+    color: $input-text-color;
+  }
+  &:hover {
+    border: 2px solid $border-color-hover;
+    box-sizing: border-box;
+  }
+  &:focus {
+    border: 2px solid $border-color-focus;
+    box-sizing: border-box;
+    &+label {
+      position: absolute;
+      top: 5px;
+      left: 34px;
+      font-size: 11px;
+      line-height: 13px;
+      font-family: $roboto-regular;
+      color: #5b9ddf;
+    }
     &::-webkit-input-placeholder {
-      color: $input-text-color;
+      color: transparent;
     }
     &:-moz-placeholder {
-      color: $input-text-color;
+      color: transparent;
     }
     &:-ms-input-placeholder {
-      color: $input-text-color;
-    }
-    &:hover {
-      border: 2px solid $border-color-hover;
-      box-sizing: border-box;
-    }
-    &:focus {
-      border: 2px solid $border-color-focus;
-      box-sizing: border-box;
-      &+label {
-        position: absolute;
-        top: 5px;
-        left: 34px;
-        font-size: 11px;
-        line-height: 13px;
-        font-family: $roboto-regular;
-        color: #5b9ddf;
-      }
-      &::-webkit-input-placeholder {
-        color: transparent;
-      }
-      &:-moz-placeholder {
-        color: transparent;
-      }
-      &:-ms-input-placeholder {
-        color: transparent;
-      }
+      color: transparent;
     }
   }
 }
@@ -137,6 +141,8 @@
   text-align: right;
   border-radius: 15px;
   background-color: rgba(0,0,0,.2);
+}
+.user-block__login {
   &::before {
     content: "";
     position: absolute;
@@ -176,9 +182,13 @@
   border-radius: 5px;
   display: none;
   box-sizing: border-box;
+}
+.user-block__login-form {
   & label {
     font-size: 0;
   }
+}
+.user-block__login-form {
   & input {
     border: 0;
     padding: 0;
@@ -199,97 +209,99 @@
     text-overflow: ellipsis;
     outline: none;
     box-sizing: border-box;
+  }
+}
+.user-block__login-form input {
+  &::-webkit-input-placeholder {
+    color: $input-text-color;
+  }
+  &:-moz-placeholder {
+    color: $input-text-color;
+  }
+  &:-ms-input-placeholder {
+    color: $input-text-color;
+  }
+  &:hover {
+    border: 2px solid $border-color-hover;
+    box-sizing: border-box;
+  }
+  &:focus {
+    border: 2px solid $border-color-focus;
+    box-sizing: border-box;
+    &+label {
+      position: absolute;
+      left: 34px;
+      font-size: 11px;
+      line-height: 13px;
+      font-family: $roboto-regular;
+      color: #5b9ddf;
+    }
+    &+.login-form__label-email {
+      top: 5px;
+    }
+    &+.login-form__label-pass {
+      top: 70px;
+    }
     &::-webkit-input-placeholder {
-      color: $input-text-color;
+      color: transparent;
     }
     &:-moz-placeholder {
-      color: $input-text-color;
+      color: transparent;
     }
     &:-ms-input-placeholder {
-      color: $input-text-color;
-    }
-    &:hover {
-      border: 2px solid $border-color-hover;
-      box-sizing: border-box;
-    }
-    &:focus {
-      border: 2px solid $border-color-focus;
-      box-sizing: border-box;
-      &+label {
-        position: absolute;
-        left: 34px;
-        font-size: 11px;
-        line-height: 13px;
-        font-family: $roboto-regular;
-        color: #5b9ddf;
-      }
-      &+.login-form__label-email {
-        top: 5px;
-      }
-      &+.login-form__label-pass {
-        top: 70px;
-      }
-      &::-webkit-input-placeholder {
-        color: transparent;
-      }
-      &:-moz-placeholder {
-        color: transparent;
-      }
-      &:-ms-input-placeholder {
-        color: transparent;
-      }
+      color: transparent;
     }
   }
-  & .login-form__form-btn {
-    border: 0;
-    outline: 0;
-    display: inline-block;
-    vertical-align: top;
-    float: left;
+}
+.login-form__form-btn {
+  border: 0;
+  outline: 0;
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+  color: $button-textcolor;
+  @include button-background;
+  @include button-box-shadow;
+  @include button-text-shadow;
+  padding: 10px 25px;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: $roboto-bold;
+  border-radius: 100px;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  &:hover {
     color: $button-textcolor;
-    @include button-background;
-    @include button-box-shadow;
-    @include button-text-shadow;
-    padding: 10px 25px;
-    font-size: 18px;
-    line-height: 24px;
-    font-family: $roboto-bold;
-    border-radius: 100px;
-    text-overflow: ellipsis;
-    cursor: pointer;
-    &:hover {
-      color: $button-textcolor;
-      @include button-background-hover;
-      @include button-box-shadow-hover;
-      transition: all 0.8s ease 0s;
-    }
-    &:active {
-      color: $button-textcolor-active;
-      @include button-background-active;
-      @include button-box-shadow-active;
-    }
+    @include button-background-hover;
+    @include button-box-shadow-hover;
+    transition: all 0.8s ease 0s;
   }
-  & .login-form__link-forgot,
-  .login-form__new-account-link {
-    display: block;
-    float: right;
-    color: $link2;
-    font-size: 13px;
-    line-height: 24px;
-    font-family: $roboto-regular;
-    font-weight: 400;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(0,0,0,.2);
-    &:hover {
-      color: $link-hover;
-      border-bottom: 1px solid rgba(255,188,158,.3);
-      transition: all 0.3s ease 0s;
-    }
-    &:active {
-      color: $link-active;
-      border-bottom: 1px solid rgba(255,188,158,.3);
-      transition: none;
-    }
+  &:active {
+    color: $button-textcolor-active;
+    @include button-background-active;
+    @include button-box-shadow-active;
+  }
+}
+ .login-form__link-forgot,
+.login-form__new-account-link {
+  display: block;
+  float: right;
+  color: $link2;
+  font-size: 13px;
+  line-height: 24px;
+  font-family: $roboto-regular;
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  &:hover {
+    color: $link-hover;
+    border-bottom: 1px solid rgba(255,188,158,.3);
+    transition: all 0.3s ease 0s;
+  }
+  &:active {
+    color: $link-active;
+    border-bottom: 1px solid rgba(255,188,158,.3);
+    transition: none;
   }
 }
 .user-block__basket {
@@ -308,6 +320,8 @@
   text-align: right;
   border-radius: 15px;
   background-color: rgba(0,0,0,.2);
+}
+.user-block__basket {
   &::before {
     content: "";
     position: absolute;
@@ -375,6 +389,8 @@
   outline: 0;
   cursor: pointer;
   background-color: transparent;
+}
+.basket-form__cancel {
   &::before {
     content: "";
     position: absolute;
@@ -428,6 +444,9 @@
   font-weight: 400;
   font-family: $roboto-regular;
   color: #333;
+}
+.basket-form__position,
+.basket-form__price {
   & .basket-form__number,
   .basket-form__size,
   .basket-form__value {
@@ -502,8 +521,8 @@
     @include button-box-shadow-active;
   }
 }
-#search-field-open:hover  #search-form,
-#login-field-open:hover #login-form,
-#basket-field-open:hover #basket-form {
+.search-field-open:hover  .user-block__search-form,
+.login-field-open:hover .user-block__login-form,
+.basket-field-open:hover .user-block__basket-form {
   display: block;
 }

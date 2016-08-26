@@ -38,6 +38,8 @@
   @include clearfix();
   margin-bottom: 20px;
   color: $link2;
+}
+.location__adress {
   & .location__magazine {
     font-size: 14px;
     line-height: 20px;
@@ -58,6 +60,8 @@
   @include clearfix();
   margin-bottom: 28px;
   color: $link2;
+}
+.location__timework {
   & span {
     display: block;
     padding-bottom: 3px;
