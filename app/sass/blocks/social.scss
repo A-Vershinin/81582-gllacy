@@ -24,6 +24,11 @@
   opacity: 0.8;
   box-sizing: border-box;
   transition: all 0.5s ease 0s;
+  & svg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
   &--tv {
     background: transparent url("../img/icons/icon-tv.svg") no-repeat center;
   }

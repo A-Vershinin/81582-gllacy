@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-js" lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -629,6 +629,10 @@
   <!-- end site-wrapper -->
   <!-- Query -->
   <!-- Plugins Query.js -->
+  <script>
+     var html = document.documentElement;
+     html.className = html.className.replace("no-js","js");
+  </script>
   <script>
     // Picture element HTML5 shiv
     document.createElement( "picture" );
