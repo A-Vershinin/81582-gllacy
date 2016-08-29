@@ -51,7 +51,7 @@
     margin-right: 0;
   }
 }
-.filter-fillers {
+.filter-fillers input[type="checkbox"] {
   &:checked {
     &+label:before {
       background: url("../img/icons/icon-checkbox-on.svg") no-repeat center;
@@ -61,7 +61,7 @@
     }
   }
 }
-.filter-fillers {
+.filter-fillers input[type="checkbox"] {
   &:disabled {
     &+label:before {
       background: url("../img/icons/icon-checkbox.svg") no-repeat center;
