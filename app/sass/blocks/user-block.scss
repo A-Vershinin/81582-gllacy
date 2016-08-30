@@ -322,12 +322,12 @@
   text-decoration: none;
   border-bottom: 1px solid rgba(0,0,0,.2);
   &:hover {
-    color: $link-hover;
+    color: $link2-hover;
     border-bottom: 1px solid rgba(255,188,158,.3);
     transition: all 0.3s ease 0s;
   }
   &:active {
-    color: $link-active;
+    color: $link2-hover;
     border-bottom: 1px solid rgba(255,188,158,.3);
     transition: none;
   }
