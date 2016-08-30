@@ -96,12 +96,12 @@
 }
 .user-block__search-icon {
   display: block;
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   margin-left: 5px;
   margin-right: 10px;
   background-color: rgba(0,0,0,.2);
-  background-image: url("../img/icons/icon-search.svg");
+  background-image: url("../img/icons/icon-search-white.png");
   background-repeat: no-repeat;
   background-position: center center;
   border-radius: 15px;
@@ -110,12 +110,26 @@
     color: $link-nav-hover;
     background: $bg-nav-hover url("../img/icons/icon-search-black.png") no-repeat center center;
     transition: background 0.8s ease 0s;
+    & .svg-icon-search {
+      fill: $link-nav-hover;
+    }
   }
   &:active {
     color: $link-nav-active;
     background-color: $bg-nav-active;
     box-shadow: inset 0 2px 1px dimgrey;
     transition: none;
+  }
+}
+.user-block__search-icon {
+  & .svg-icon-search {
+    fill: $link;
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    &:hover {
+      fill: $link-nav-hover;
+    }
   }
 }
 .no-svg .user-block__search-icon {
@@ -159,12 +173,26 @@
     &::before {
       background: transparent url("../img/icons/icon-enter-black.png") no-repeat center center;
     }
+    & .svg-icon-login {
+      fill: $link-nav-hover;
+    }
   }
   &:active {
     color: #333;
     background-color: #ededed;
     box-shadow: inset 0 2px 1px dimgrey;
     transition: none;
+  }
+}
+.user-block__login {
+  & .svg-icon-login {
+    fill: $link;
+    position: absolute;
+    top: 7px;
+    left: 15px;
+    &:hover {
+      fill: $link-nav-hover;
+    }
   }
 }
 .user-block__login-form {
@@ -309,8 +337,8 @@
   display: inline-block;
   vertical-align: middle;
   padding: 9px 0;
-  padding-left: 43px; //38
-  padding-right: 34px; // 16
+  padding-left: 42px; //38 43
+  padding-right: 17px; // 16 34
   font-size: 14px;
   line-height: 16px;
   font-family: $roboto-medium;
@@ -320,23 +348,27 @@
   text-align: right;
   border-radius: 15px;
   background-color: rgba(0,0,0,.2);
+  box-sizing: border-box;
 }
 .user-block__basket {
+  & span {
+    padding-right: 5px;
+  }
   &::before {
     content: "";
     position: absolute;
     width: 20px;
     height: 20px;
-    top: 7px;
+    top: 8px;
     left: 15px;
-    background: transparent url("../img/icons/icon-basket.svg") no-repeat center;
+    background: transparent url("../img/icons/icon-basket-white.png") no-repeat center;
   }
   &:hover {
     color: #000;
     background-color: $link;
     transition: background 0.8s ease 0s;
     &::before {
-      background: transparent url("../img/icons/icon-basket2.svg") no-repeat center center;
+      background: transparent url("../img/icons/icon-basket-full.png") no-repeat center center;
     }
   }
   &:active {
@@ -344,6 +376,19 @@
     background-color: #ededed;
     box-shadow: inset 0 2px 1px dimgrey;
     transition: none;
+  }
+}
+.user-block__basket {
+  & .svg-icon-basket {
+    fill: $link;
+    position: absolute;
+    top: 7px;
+    left: 15px;
+  }
+}
+.user-block__basket:hover {
+  .svg-icon-basket {
+    display: none;
   }
 }
 .user-block__basket-form {

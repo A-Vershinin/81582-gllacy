@@ -29,6 +29,7 @@
   transition: all 0.4s ease 0s;
 }
 .for-buyers__link {
+  position: relative;
   & span {
     font-weight: 700;
     font-family: $roboto-bold;
@@ -42,6 +43,12 @@
       height: 13px;
       background: url("../img/icons/icon-heart.svg") no-repeat;
     }
+  }
+  & svg {
+    position: absolute;
+    top: 4px;
+    left: -20px;
+    fill: #f7f8f8;
   }
   &:hover {
     color: $link-hover;

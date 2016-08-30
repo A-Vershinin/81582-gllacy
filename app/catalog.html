@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <link href="css/libs.min.css" rel="stylesheet">
 </head>
 
@@ -92,7 +92,11 @@
           <!-- end nav -->
           <ul class="user-block">
             <li class="user-block__item search-field-open">
-              <i class="user-block__search-icon">Поиск</i>
+              <i class="user-block__search-icon">Поиск
+                <svg class="svg-icon-search" width="17" height="17">
+                  <use xlink:href="/img/svg-symbols.svg#icon-search"></use>
+                </svg>
+              </i>
 
               <form class="user-block__search-form" action="#" method="post" id="search-form">
                 <input type="search" name="search-btn" id="search-field" placeholder="Что ищем?">
@@ -101,7 +105,11 @@
             </li>
             <!-- end user-block__search -->
             <li class="user-block__item login-field-open">
-              <a href="#" class="user-block__login" >Вход</a>
+              <a href="#" class="user-block__login">Вход
+                <svg class="svg-icon-login" width="20" height="19">
+                  <use xlink:href="/img/svg-symbols.svg#icon-enter"></use>
+                </svg>
+              </a>
 
               <form class="user-block__login-form" action="#" method="get" id="login-form">
                 <input type="email" name="email" id="email-field" placeholder="Электронная почта" required>
@@ -117,7 +125,11 @@
             </li>
             <!-- end user-block__login -->
             <li class="user-block__item basket-field-open">
-              <a href="#" class="user-block__basket"><span>2</span>товара</a>
+              <a href="#" class="user-block__basket"><span>2</span>товара
+                <!-- <svg class="svg-icon-basket" width="20" height="21">
+                  <use xlink:href="/img/svg-symbols.svg#icon-basket"></use>
+                </svg> -->
+              </a>
               <form class="user-block__basket-form" action="#" method="get" id="basket-form">
                 <ul class="basket-form__list">
                   <li class="basket-form__item">
@@ -595,15 +607,35 @@
   <footer class="page-footer">
     <div class="container">
       <div class="social">
-        <a class="social__btn social__btn--tv" href="#">Твиттер</a>
-        <a class="social__btn social__btn--inst" href="#">Инстаграм</a>
-        <a class="social__btn social__btn--fb" href="#">Фейсбук</a>
-        <a class="social__btn social__btn--vk" href="#">Вконтакте</a>
+        <a class="social__btn social__btn--tv" href="#">Твиттер
+          <svg width="31" height="32">
+            <use xlink:href="/img/svg-symbols.svg#icon-tv"></use>
+          </svg>
+        </a>
+        <a class="social__btn social__btn--inst" href="#">Инстаграм
+          <svg width="31" height="32">
+            <use xlink:href="/img/svg-symbols.svg#icon-inst"></use>
+          </svg>
+        </a>
+        <a class="social__btn social__btn--fb" href="#">Фейсбук
+          <svg width="31" height="32">
+            <use xlink:href="/img/svg-symbols.svg#icon-fb"></use>
+          </svg>
+        </a>
+        <a class="social__btn social__btn--vk" href="#">Вконтакте
+          <svg width="31" height="32">
+            <use xlink:href="/img/svg-symbols.svg#icon-vk"></use>
+          </svg>
+        </a>
       </div>
       <!-- end social -->
       <ul class="for-buyers">
         <li class="for-buyers__item">
-          <a class="for-buyers__link" href="#"><span>Для поставщиков</span></a>
+          <a class="for-buyers__link" href="#"><span>Для поставщиков</span>
+            <svg width="15" height="13">
+              <use xlink:href="/img/svg-symbols.svg#icon-heart"></use>
+            </svg>
+          </a>
         </li>
         <li class="for-buyers__item">
           <a class="for-buyers__link" href="#">Наши документы</a>
