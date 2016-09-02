@@ -46,11 +46,13 @@
     // &::-ms-expand {
     //   display: none;
     // }
+  }
+}
+.filter-sort select {
     &:hover {
       color: $link2;
       background-color: #fff;
     }
-  }
 }
 .filter-sort {
   & option {

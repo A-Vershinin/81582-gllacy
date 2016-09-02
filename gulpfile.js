@@ -30,7 +30,7 @@ gulp.task("style", function() { //Создаём таск "style"
         // "last 2 Firefox versions",
         // "last 2 Opera versions",
         // "last 2 Edge versions"
-        "last 2 version"
+        "last 3 version"
       ]}),
       mqpacker({
         sort: true //соеденяем все медиазапросы

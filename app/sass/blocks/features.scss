@@ -1,7 +1,6 @@
 .features {
   color: $base-color;
-  background-color: green;
-  background: transparent url("../img/bg-vaf@1x.png");
+  background: #e9dcc0 url("../img/bg-vaf@1x.png");
   background-size: 69%;
   border-radius: 15px;
   margin-bottom: 40px;
@@ -36,9 +35,9 @@
   list-style: none;
   font-size: 16px;
   box-sizing: border-box;
-  &:nth-child(2n) {
+}
+.features__item:nth-child(2n) {
     margin-right: 0;
-  }
 }
 .features__icon {
   position: absolute;
@@ -46,18 +45,28 @@
   left: 2px;
   width: 47px;
   height: 47px;
+}
+.features__icon {
   &--icecrem {
     background: transparent url(../img/icons/icon-icecream.svg) no-repeat;
   }
+}
+.features__icon {
   &--cow {
     background: transparent url(../img/icons/icon-cow.svg) no-repeat;
   }
+}
+.features__icon {
   &--leaflet {
     background: transparent url(../img/icons/icon-leaflet.svg) no-repeat;
   }
+}
+.features__icon {
   &--thermo {
     background: transparent url(../img/icons/icon-thermo.svg) no-repeat;
   }
+}
+.features__icon {
   & .svg-icon-icecream  {
     fill: transparent;
     stroke: #323232;

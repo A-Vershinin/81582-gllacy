@@ -14,6 +14,8 @@
   display: inline-block;
   vertical-align: middle;
   font-size: 16px;
+}
+.breadcrumbs__item {
   &:last-child .breadcrumbs__link {
     &::after {
       background: none;
@@ -55,14 +57,18 @@
     background-color: transparent;
     transition: none;
   }
+}
+.breadcrumbs__link {
   &--active {
     color: $link-nav--active;
     background-color: transparent;
     border-radius: 15px;
     text-decoration: none;
-    &:hover {
-      color: $link-nav--active-hover;
-      background: transparent;
-    }
+  }
+}
+.breadcrumbs__link--active {
+  &:hover {
+    color: $link-nav--active-hover;
+    background: transparent;
   }
 }

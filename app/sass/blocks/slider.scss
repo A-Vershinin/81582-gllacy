@@ -42,6 +42,8 @@
   text-overflow: ellipsis;
   cursor: pointer;
   outline: none;
+}
+.slider__btn {
   &:hover {
     color: $button-textcolor;
     @include button-background-hover;
@@ -72,13 +74,16 @@
     cursor: pointer;
     background-color: transparent;
     border: 2px solid #fff;
+  }
+}
+.slider__controls label {
     &:hover {
       background-color: rgba(255,255,255, 0.4);
       }
     &:active {
       background-color: #fff;
       }
-    }
+
 }
 /*Переключение слайдов*/
 #btn-1:checked ~ .site-wrapper #slide1,

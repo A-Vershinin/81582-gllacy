@@ -40,6 +40,8 @@
   & label {
     font-size: 0;
   }
+}
+.user-block__search-form {
   & input {
     margin: 0;
     outline: 0;
@@ -77,9 +79,12 @@
     border: 2px solid $border-color-hover;
     box-sizing: border-box;
   }
-  &:focus {
+}
+.user-block__search-form input:focus {
     border: 2px solid $border-color-focus;
     box-sizing: border-box;
+  }
+.user-block__search-form input:focus {  
     &+label {
       position: absolute;
       top: 5px;
@@ -98,7 +103,6 @@
     &:-ms-input-placeholder {
       color: transparent;
     }
-  }
 }
 .user-block__search-icon {
   display: block;

@@ -82,6 +82,8 @@
   border-radius: 5px;
   cursor: pointer;
   z-index: 2;
+}
+.supnav__link {
   &:hover {
     background-color: $bg-supnav-hover;
     transition: background 0.5s ease 0s;
@@ -96,6 +98,8 @@
   color: $link-supnav-onpage;
   background-color: $bg-supnav-onpage;
   border-radius: 0;
+}
+.supnav__link--active {
   &:hover {
     color: $link-supnav-onpage-hover;
     background-color: $bg-supnav-onpage-hover;

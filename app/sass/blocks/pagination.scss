@@ -4,6 +4,7 @@
   border-bottom: 1px solid rgba(255,255,255,.3);
   @include clearfix();
 }
+
 .pagination__list {
   position: relative;
   margin: 0;
@@ -14,7 +15,11 @@
   max-width: 267px;
   float: right;
   padding: 0 22px;
-  &::before, &::after {
+}
+
+.pagination__list {
+  &::after,
+  &::before {
     content: "";
     position: absolute;
     width: 9px;
@@ -22,16 +27,19 @@
     top: 50%;
     transform: translate(0, -50%);
   }
+
   &:before {
     left: 0;
     background: url("../img/icons/icon-arrow-left.svg") no-repeat center;
     opacity: 0.2;
   }
+
   &::after {
     right: 0;
     background: url("../img/icons/icon-arrow-right.svg") no-repeat center;
   }
 }
+
 .pagination__item {
   display: inline-block;
   vertical-align: top;
@@ -57,24 +65,29 @@
   color: $link;
   background-color: transparent;
   cursor: pointer;
+}
+
+.pagination__link {
   &:hover {
     background-color: rgba(255,255,255,.2);
     border-radius: 50%;
     transition: background-color 0.5s ease 0s;
   }
+
   &:active {
     color: $link2;
     border-radius: 50%;
     background-color: #fff;
   }
-  &--current {
+}
+
+.pagination__link--current {
+  color: $link2;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.pagination__link--current:hover {
     color: $link2;
     border-radius: 50%;
     background-color: #fff;
-    &:hover {
-      color: $link2;
-      border-radius: 50%;
-      background-color: #fff;
-    }
-  }
 }

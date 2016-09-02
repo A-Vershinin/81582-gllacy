@@ -4,12 +4,14 @@
   margin-right: 25px;
   position: relative;
 }
+
 .nav__list {
   margin: 0;
   padding: 0;
   list-style: none;
   font-size: 0;
 }
+
 .nav__item {
   display: inline-block;
   vertical-align: top;
@@ -17,14 +19,17 @@
   padding-bottom: 10px;
   padding-right: 8px;
 }
+
 .nav__item {
   &:first-child {
     padding-left: 13px;
   }
+
   &:last-child {
     padding-right: 0;
   }
 }
+
 .nav__link {
   margin: 0;
   display: block;
@@ -35,11 +40,12 @@
   font-family: $roboto-bold;
   color: $link-nav;
   font-weight: 300;
-  text-decoration:  underline;
-  text-decoration-color: rgba(0,0,0,.2);
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,.2);
   background-color: $bg-nav;
   cursor: pointer;
 }
+
 .nav__link {
   &:hover {
     color: $link-nav-hover;
@@ -48,23 +54,14 @@
     border-radius: 15px;
     transition: background 0.8s ease 0s;
   }
+
   &:active {
     color: $link-nav-active;
     background-color: $bg-nav-active;
     box-shadow: inset 0 2px 1px dimgrey;
     transition: none;
   }
-  &--active {
-    color: $link-nav--active;
-    background-color: $bg-nav-onpage;
-    text-decoration: none;
-    border-radius: 15px;
-    &:hover {
-      color: $link-nav--active-hover;
-      background-color: $bg-nav-onpage-hover;
-      box-shadow: none;
-    }
-  }
+
   &--show {
     &~.supnav {
       display: block;
@@ -72,6 +69,19 @@
   }
 }
 
-.nav__item:hover  .supnav {
+.nav__link--active {
+  color: $link-nav--active;
+  background-color: $bg-nav-onpage;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+.nav__link--active:hover {
+  color: $link-nav--active-hover;
+  background-color: $bg-nav-onpage-hover;
+  box-shadow: none;
+}
+
+.nav__item:hover .supnav {
   display: block;
 }

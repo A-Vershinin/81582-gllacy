@@ -17,7 +17,7 @@
 .discount__item {
   &:nth-child(2n-1) {
     float: left;
-    background: transparent url("../img/bg1@1x.png") no-repeat center;
+    background: #bf425e url("../img/bg1@1x.png") no-repeat center;
     background-size: 100% 100%;
   }
   & .discount__title {
@@ -36,7 +36,8 @@
     font-weight: 700;
     letter-spacing: 1px;
   }
-  & .discount__btn {
+}
+   .discount__btn {
     position: relative;
     display: inline-block;
     vertical-align: top;
@@ -60,6 +61,8 @@
     cursor: pointer;
     box-sizing: border-box;
     outline: none;
+  }
+  .discount__btn {
     &:hover {
       color: $button-textcolor;
       @include button-background-hover;
@@ -72,16 +75,18 @@
       @include button-box-shadow-active;
     }
   }
-}
+
 .discount__item {
   &:nth-child(2n) {
     float: right;
     margin-right: 0;
-    background: transparent url("../img/bg2@1x.png") no-repeat center;
+    background: #50362a url("../img/bg2@1x.png") no-repeat center;
     background-size: 100% 100%;
-    & .discount__btn {
-      padding: 8px 22px 13px;
-    }
+  }
+}
+.discount__item:nth-child(2n) {
+  & .discount__btn {
+    padding: 8px 22px 13px;
   }
 }
 @media #{$retina} {

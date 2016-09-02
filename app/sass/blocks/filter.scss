@@ -28,6 +28,8 @@
   border-radius: 100px;
   cursor: pointer;
   box-sizing: border-box;
+}
+.filter-form__btn {
   &:hover {
     color: $link2;
     background-color: #fff;

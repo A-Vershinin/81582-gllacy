@@ -27,6 +27,8 @@
   font-family: $roboto-medium;
   cursor: pointer;
   box-sizing: border-box;
+}
+.filter-fillers label {
   &::before {
     content: "";
     position: absolute;
