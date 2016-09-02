@@ -28,14 +28,14 @@
   text-align: left;
 }
 .about-blog__link {
+  display: block;
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
   font-family: $roboto-bold;
   color: $link2;
   text-align: left;
-  padding-bottom: 85px;
-  margin-bottom: 85px;
+  margin-bottom: 10px;
   padding-right: 20px;
   cursor: pointer;
   letter-spacing: 0.3px;
@@ -52,7 +52,7 @@
   border: 0;
   width: 48.9%;
   // padding: 6px 26px;
-  padding: 6px 2.4%;
+  padding: 5px 2.4%;
   border-radius: 15px;
   float: right;
   background: url("../img/bg4@1x.png") no-repeat center;

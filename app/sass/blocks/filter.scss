@@ -1,6 +1,6 @@
 .filter {
   max-width: 862px;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   color: $link;
   background-color: transparent;
   @include clearfix();
@@ -14,9 +14,10 @@
   outline: 0;
   max-width: 144px;
   display: inline-block;
+  vertical-align: top;
   float: left;
-  margin-top: 27px;
-  padding: 8px 24px;
+  margin-top: 28px;
+  padding: 6px 28px 8px;
   font-size: 16px;
   line-height: 18px;
   font-family: $roboto-medium;
@@ -24,7 +25,7 @@
   color: $link;
   border: 2px solid #fff;
   background-color: rgba(255, 255, 255, 0.19);
-  border-radius: 15px;
+  border-radius: 100px;
   cursor: pointer;
   box-sizing: border-box;
   &:hover {

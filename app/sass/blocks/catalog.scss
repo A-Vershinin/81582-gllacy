@@ -22,6 +22,9 @@
   &:last-child {
     margin-right: 0;
   }
+  // &:first-child {
+  //   padding-left: 0;
+  // }
 }
 
 .catalog__item:hover {
@@ -48,6 +51,7 @@
 .catalog__info {
   position: relative;
   margin-bottom: 12px;
+  padding-top: 6px;
 }
 .catalog__info {
   & .catalog__img {

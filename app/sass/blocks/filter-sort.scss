@@ -3,7 +3,7 @@
   padding: 0;
   display: inline-block;
   vertical-align: top;
-  padding-left: 16px;
+  padding-left: 17px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -23,14 +23,15 @@
     border: 0;
     display: inline-block;
     vertical-align: top;
-    padding: 7px 12px;
+    padding: 6px 14px 6px 12px;
     font-size: 16px;
     line-height: 18px;
     font-family: $roboto-medium;
     font-weight: 500;
     color: $link;
-    border-radius: 15px;
+    border-radius: 100px;
     background-color: rgba(255,255,255,.2);
+    box-sizing: border-box;
     // отменяем стандартное отображение select'а
     // -webkit-appearance: none;
     //  -moz-appearance: none;
