@@ -5,7 +5,7 @@
   position: absolute;
   top: 60px;
   left: 4px;
-  width: 144px;
+  padding-bottom: 12px;
   background-color: $bg-supnav;
   border-radius: 5px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
@@ -71,7 +71,6 @@
   margin: 0;
   padding: 6.5px 22px;
   padding-left: 20px;
-  margin-bottom: 3px;
   color: $link-supnav;
   background-color: $bg-supnav;
   font-size: 14px;
