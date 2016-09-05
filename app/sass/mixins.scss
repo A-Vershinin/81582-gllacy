@@ -1,0 +1,33 @@
+/* Переменные и миксины*/
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@mixin button-background {
+  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+  background-color: #fff;
+}
+@mixin button-background-hover {
+  background-image: linear-gradient(to top, #ec6e5d 0%, #f58669 100%);
+  background-color: #fff;
+}
+@mixin button-background-active {
+  background-image: linear-gradient(to top, #e1613e 0%, #d74531 100%);
+  background-color: #fff;
+}
+@mixin button-box-shadow {
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+@mixin button-box-shadow-hover {
+  box-shadow: 0 2px 2px #ac1000;
+}
+@mixin button-box-shadow-active {
+  box-shadow: inset 0 2px 2px #942718;
+}
+@mixin button-text-shadow {
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+}

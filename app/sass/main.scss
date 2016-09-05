@@ -1,0 +1,83 @@
+/*Общие стили*/
+body {
+  min-width: 320px;
+  margin: 0;
+  color: $base-color;
+  background-color: $base-bg-color;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: $roboto-regular;
+  font-weight: 400;
+}
+body > input[type="radio"] {
+  display: none;
+}
+input {
+  color: $input-textarea-color;
+  background-color: white;
+  border: 1px solid $border-color;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $roboto-regular;
+  border-radius: 5px;
+  &::-webkit-input-placeholder {
+    color: $input-text-color;
+  }
+  &:-moz-placeholder {
+    color: $input-text-color;
+  }
+  &:-ms-input-placeholder {
+    color: $input-text-color;
+  }
+}
+// input:hover {
+//   color: $link;
+//   border: 2px solid $border-color-hover;
+// }
+input:focus {
+  // border: 2px solid $border-color-focus;
+  &::-webkit-input-placeholder {
+    color: transparent;
+  }
+  &:-moz-placeholder {
+    color: transparent;
+  }
+  &:-ms-input-placeholder {
+    color: transparent;
+  }
+}
+input:invalid {
+  border-color: #f0b1b1;
+}
+textarea {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: $roboto-regular;
+  color: $input-textarea-color;
+  background-color: white;
+  border: 1px solid $border-color;
+  &::-webkit-input-placeholder {
+    color: $input-text-color;
+  }
+  &:-moz-placeholder {
+    color: $input-text-color;
+  }
+  &:-ms-input-placeholder {
+    color: $input-text-color;
+  }
+}
+textarea:hover {
+  color: $input-textarea-color;
+}
+textarea:focus {
+  color: $input-textarea-color;
+}
+textarea:invalid {
+  color: #f0b1b1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

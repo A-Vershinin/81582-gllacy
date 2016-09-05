@@ -1,0 +1,124 @@
+.slider {
+  position: relative;
+  padding-top: 273px;
+  text-align: center;
+  color: $link;
+  background-color: transparent;
+  margin-bottom: 42px;
+}
+.slider__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.slider__item {
+  display: none;
+}
+.slider__title {
+  width: 61%;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.slider__btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 40px;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  @include button-background;
+  @include button-box-shadow;
+  @include button-text-shadow;
+  color: $button-textcolor;
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 400;
+  font-family: $roboto-bold;
+  text-decoration: none;
+  border-radius: 100px;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  outline: none;
+}
+.slider__btn {
+  &:hover {
+    color: $button-textcolor;
+    @include button-background-hover;
+    @include button-box-shadow-hover;
+    transition: all 0.8s ease 0s;
+  }
+  &:active {
+    color: $button-textcolor-active;
+    @include button-background-active;
+    @include button-box-shadow-active;
+  }
+}
+.slider__controls {
+  position: absolute;
+  bottom: 21px;
+  left: 3px;
+  font-size: 0;
+  z-index: 20;
+}
+.slider__controls {
+    & label {
+    display: inline-block;
+    vertical-align: top;
+    width: 17px;
+    height: 17px;
+    margin-right: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+  }
+}
+.slider__controls label {
+    &:hover {
+      background-color: rgba(255,255,255, 0.4);
+      }
+    &:active {
+      background-color: #fff;
+      }
+
+}
+/*Переключение слайдов*/
+#btn-1:checked ~ .site-wrapper #slide1,
+#btn-2:checked ~ .site-wrapper #slide2,
+#btn-3:checked ~ .site-wrapper #slide3 {
+  display: block;
+}
+/*Переключение картинки слайдов*/
+#btn-1:checked ~ .site-wrapper {
+  background: $bg-color-slider1 url("../img/pict/slide1@1x.png") no-repeat top center;
+}
+#btn-2:checked ~ .site-wrapper {
+  background: $bg-color-slider2 url("../img/pict/slide2@1x.png") no-repeat top center;
+}
+#btn-3:checked ~ .site-wrapper {
+  background: $bg-color-slider3 url("../img/pict/slide3@1x.png") no-repeat top center;
+}
+
+@media #{$retina} {
+  #btn-1:checked ~ .site-wrapper {
+    background-image: url("../img/pict/slide1@2x.png");
+    background-size: 100%;
+  }
+  #btn-2:checked ~ .site-wrapper {
+    background-image: url("../img/pict/slide2@2x.png");
+    background-size: 100%;
+  }
+  #btn-3:checked ~ .site-wrapper {
+    background-image: url("../img/pict/slide3@2x.png");
+    background-size: 100%;
+  }
+}
+/*Переключение фона у кнопок слайдера*/
+#btn-1:checked ~ .site-wrapper label[for="btn-1"],
+#btn-2:checked ~ .site-wrapper label[for="btn-2"],
+#btn-3:checked ~ .site-wrapper label[for="btn-3"] {
+  background-color: #fff;
+}
