@@ -8,6 +8,5 @@ Thumbs.db
 *.ai
 *.pdf
 *.iml
-css/*.css
 build/
 libs/
