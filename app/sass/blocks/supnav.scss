@@ -1,0 +1,106 @@
+.supnav {
+  display: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 60px;
+  left: 4px;
+  padding-bottom: 12px;
+  background-color: $bg-supnav;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+}
+.supnav__item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.supnav__suptitle {
+  position: relative;
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 10px 22px;
+  color: $link-supnav;
+  background-color: $bg-supnav;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $roboto-regular;
+  font-weight: 700;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.supnav__suptitle {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 128px;
+    height: 1px;
+    top: 38px;
+    left: 6px;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+  }
+}
+.supnav__item {
+  &:first-child {
+    & .supnav__link {
+      position: relative;
+      z-index: 5;
+      font-weight: 700;
+    }
+  }
+}
+.supnav__item:first-child .supnav__link  {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 128px;
+    height: 1px;
+    top: 31px;
+    left: 6px;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+  }
+}
+.supnav__link-wrapper {
+  border-bottom: 1px solid rgba(0,0,0,.2);
+}
+.supnav__link {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 6.5px 22px;
+  padding-left: 20px;
+  color: $link-supnav;
+  background-color: $bg-supnav;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $roboto-regular;
+  text-decoration: none;
+  font-weight: 400;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2;
+}
+.supnav__link {
+  &:hover {
+    background-color: $bg-supnav-hover;
+    transition: background 0.5s ease 0s;
+    border-radius: 0;
+  }
+  &:active {
+    background-color: $bg-supnav-active;
+    transition: none;
+  }
+}
+.supnav__link--active {
+  color: $link-supnav-onpage;
+  background-color: $bg-supnav-onpage;
+  border-radius: 0;
+}
+.supnav__link--active {
+  &:hover {
+    color: $link-supnav-onpage-hover;
+    background-color: $bg-supnav-onpage-hover;
+  }
+}

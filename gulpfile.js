@@ -130,7 +130,8 @@ gulp.task("js-common", function() {
 });
 // Оптимизируем js-библиотеки
 gulp.task("js-libs", function() {
-  return gulp.src("app/libs/**/*.js") //берём все файлы .js в app/libs
+  // return gulp.src("app/libs/**/*.js") //берём все файлы .js в app/libs
+  return gulp.src("bower_modules/**/*.js") //берём все файлы .js в bower_modules
   .pipe(concat("libs.min.js"))
   .pipe(uglify())  //cжимаем libs.css
   .pipe(gulp.dest("build/js"));
@@ -148,7 +149,7 @@ gulp.task("build", function (fn) {
     "clean",
     "copy",
     "style",
-    "images",
+    // "images",
     "svg-symbols",
     "js-common",
     "js-libs",
