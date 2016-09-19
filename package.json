@@ -1,5 +1,5 @@
 {
-  "name": "gllacy",
+  "name": "Gllacy",
   "version": "0.1.0",
   "private": true,
   "description": "Личный проект Gllacy для HTML академии",
@@ -7,7 +7,7 @@
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:A-Vershinin/81582-gllacy.git"
+    "url": "git+ssh://git@github.com/A-Vershinin/81582-gllacy.git"
   },
   "bugs": {
     "url": "https://github.com/A-Vershinin/81582-gllacy/issues"
@@ -30,6 +30,7 @@
     "gulp-svgmin": "1.2.2",
     "gulp-svgstore": "6.0.0",
     "gulp-uglifyjs": "^0.6.2",
+    "gulp-util": "^3.0.7",
     "imagemin-jpegtran": "^5.0.2",
     "imagemin-optipng": "^5.1.1",
     "run-sequence": "1.2.1"
