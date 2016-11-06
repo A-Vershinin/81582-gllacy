@@ -99,7 +99,16 @@
                 <svg class="svg-icon-search" width="17" height="17">
                   <use xlink:href="/img/svg-symbols.svg#icon-search"></use>
                 </svg>
+                <!-- <svg class="svg-icon-search" width="17" height="17">
+                  <image xlink:href="/img/svg-symbols.svg#icon-search" src="/img/icons/icon-search-black.png"></use>
+                </svg> -->
+                <!-- фолбек на png -->
               </i>
+              <!-- ретина фолбек на png -->
+              <!-- <picture>
+                <source srcset="graph.svg" type="image/svg+xml">
+                <img srcset="graph-small.png, graph-medium.png 400, graph-large.png 800" alt="A lovely graph.”>
+              </picture> -->
 
               <form class="user-block__search-form" action="#" method="post" id="search-form">
                 <input type="search" name="search-btn" id="search-field" placeholder="Что ищем?">
@@ -330,13 +339,16 @@
             <p class="about-blog__text">Новое в нашем блоге</p>
             <a class="about-blog__link" href="#">10  способов сервировки
             фруктовых щербетов к столу</a>
-
           </div>
           <form class="about-form" action="#" method="post">
             <p class="about-form__desc">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) </p>
-            <input type="email" name="email" id="email_field" placeholder="Электронная почта">
-            <label for="email_field">Электронная почта</label>
-            <button class="about-form__btn" type="submit">Отправить</button>
+            <div class="about-form-left">
+              <input type="email" name="email" id="email_field" placeholder="Электронная почта">
+            </div>
+            <div class="about-form-right">
+              <label for="email_field">Электронная почта</label>
+              <button class="about-form__btn" type="submit">Отправить</button>
+            </div>
           </form>
         </section>
       </div>

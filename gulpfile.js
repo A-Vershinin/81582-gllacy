@@ -149,7 +149,7 @@ gulp.task("build", function (fn) {
     "clean",
     "copy",
     "style",
-    "images",
+    // "images",
     "svg-symbols",
     "js-common",
     "js-libs",

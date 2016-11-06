@@ -1,6 +1,6 @@
 /*Общие стили*/
 body {
-  min-width: 320px;
+  min-width: 900px;
   margin: 0;
   color: $base-color;
   background-color: $base-bg-color;
@@ -30,12 +30,8 @@ input {
     color: $input-text-color;
   }
 }
-// input:hover {
-//   color: $link;
-//   border: 2px solid $border-color-hover;
-// }
+
 input:focus {
-  // border: 2px solid $border-color-focus;
   &::-webkit-input-placeholder {
     color: transparent;
   }
